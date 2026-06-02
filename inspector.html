@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>INSPECTOR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME FUNCIONAL -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="inspector.css">
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="logos-bar">
+        <div class="logo left"><img src="img/Logo_Ayundamiento.png"></div>
+        <div class="logo center"><img src="img/logo_fiestasteatro.png"></div>
+        <div class="logo right"><img src="img/logo_ferias.png"></div>
+    </div>
+</header>
+
+<section class="hero">
+    <nav class="nav">
+        <a href="musica.html" class="btn-volver">← Volver</a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <div class="menu-hamburguesa" id="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Música</a>
+            <a href="#">Grupos</a>
+            <a href="#">Contacto</a>
+        </div>
+    </nav>
+
+    <h1>INSPECTOR</h1>
+    <p>Descubre lo mejor de nuestra feria</p>
+</section>
+<!-- ================= BIENVENIDA ================= -->
+<section class="bienvenida">
+
+    <div class="bienvenida-img">
+        <img src="img/inspector.PNG">
+    </div>
+
+   <div class="bienvenida-texto">
+<h2>Presentación de Inspector</h2> 
+<p> El pasado <strong>16 de noviembre a las 9:00 PM</strong>, el Teatro del Pueblo se transformó en una auténtica fiesta llena de ritmo, energía y emoción con la espectacular presentación de <strong>Inspector</strong>,
+    una de las bandas más importantes y queridas del ska mexicano. </p>
+    <p> Desde el inicio del concierto, cientos de familias, jóvenes y visitantes comenzaron a cantar, bailar y disfrutar de una noche inolvidable dentro de la Feria Regional de la Revolución 2025. La música, las luces y el gran ambiente hicieron vibrar cada rincón de Pabellón de Arteaga. </p>
+    <p> Con sus grandes éxitos y el inconfundible estilo que los caracteriza, Inspector logró conectar con el público en cada canción, creando momentos llenos de alegría, emoción y convivencia que quedarán grabados en la memoria de todos los asistentes. </p>
+    <p> El concierto destacó por la increíble energía del público, que no dejó de corear cada tema y disfrutar de una de las noches más emocionantes de la feria. La presentación se convirtió en un espacio donde la música unió generaciones y fortaleció el orgullo de celebrar nuestras tradiciones. </p>
+    <p> La Feria Regional de la Revolución continúa consolidándose como una de las celebraciones más importantes de la región, ofreciendo espectáculos de gran nivel, tradición y momentos inolvidables para toda la comunidad. </p>
+ </div> 
+</section>
+<section class="video-teatro">
+    <h2>Así se vivió en el Teatro del Pueblo</h2>
+    <p>Revive los mejores momentos de la presentación y siente la energía del público.</p>
+
+    <div class="video-wrapper">
+        <video controls poster="img/inspector.PNG">
+            <source src="img/elbebeto.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+    </div>
+</section>
+
+    <!-- BOTONES FLOTANTES -->
+<div class="redes-flotantes">
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://facebook.com/TUPAGINA" target="_blank" class="btn-facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    © 2026 Feria Regional · Música y Grupos
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="musica.js"></script>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
+</script>
+<script>
+function scrollCards(direction) {
+    const container = document.getElementById("cards");
+    const scrollAmount = 300;
+
+    container.scrollLeft += direction * scrollAmount;
+}
+</script>
+<script>
+function toggleGrupos() {
+    const seccion = document.getElementById("grupos");
+    const boton = document.getElementById("btnGrupos");
+
+    seccion.classList.toggle("mostrar");
+
+    if (seccion.classList.contains("mostrar")) {
+        boton.textContent = "Ocultar grupos";
+    } else {
+        boton.textContent = "Ver grupos";
+    }
+}
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
+});
+</script>
+</body>
+</html>

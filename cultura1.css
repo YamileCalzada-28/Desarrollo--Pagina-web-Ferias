@@ -1,0 +1,2812 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --azul: #0a3d62;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: white;
+    padding: 15px 40px;
+}
+
+.logos-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+}
+
+/* CONTENEDOR DE LOGOS */
+.logos-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+/* LOGOS */
+.logo img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+/* POSICIÓN DE LOGOS */
+.logo.left {
+    justify-self: start;
+}
+
+.logo.center {
+    justify-self: center;
+}
+
+.logo.right {
+    justify-self: end;
+}
+/* ================= HERO / FONDO AZUL ================= */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #0a3d62, #0a3d62);
+    color: white;
+    text-align: center;
+    padding: 140px 20px 120px;
+}
+
+/* ================= NAV DENTRO DEL HERO ================= */
+.nav {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    z-index: 1000;
+}
+
+/* ================= BOTÓN VOLVER (IZQUIERDA) ================= */
+.btn-volver {
+    margin-right: auto;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: all .3s ease;
+}
+
+.btn-volver:hover {
+    background: white;
+    color: var(--azul);
+}
+
+/* ================= HAMBURGUESA (DERECHA) ================= */
+.hamburger {
+    margin-left: auto;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* ================= MENU HAMBURGUESA ================= */
+.menu-hamburguesa {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    background: white;
+    width: 220px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    animation: fadeDown .3s ease;
+}
+
+.menu-hamburguesa a {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.menu-hamburguesa a:hover {
+    background: #f2f2f2;
+}
+
+.menu-hamburguesa.active {
+    display: flex;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= HERO TEXTO ================= */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: .9;
+}
+
+/* ================= BIENVENIDA ================= */
+.bienvenida {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    padding: 120px 12%;
+    align-items: center;
+    background: white;
+}
+
+.bienvenida-img {
+    display: flex;
+    flex-direction: column;   /* una debajo de la otra */
+    gap: 30px;                /* espacio entre imágenes */
+}
+
+.bienvenida-img img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 25px;
+    box-shadow: 0 25px 55px rgba(0,0,0,.35);
+    object-fit: cover;
+}
+.bienvenida-img img:last-child {
+    max-width: 520px;
+    align-self: flex-start;
+}
+
+.bienvenida-texto h2 {
+    position: relative;
+    color: var(--azul);
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+}
+
+.bienvenida-texto h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 55px;
+    height: 4px;
+    border-radius: 10px;
+}
+
+.bienvenida-texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    max-width: 520px;
+}
+
+/* ================= GRUPOS ================= */
+.seccion-grupos {
+    padding: 100px 12%;
+    background: #fafafa;
+    text-align: center;
+}
+
+.seccion-grupos h2 {
+    position: relative;
+    display: inline-block;
+    color: var(--azul);
+    margin-bottom: 60px;
+    font-size: 2.2rem;
+    padding-bottom: 12px;
+}
+
+.seccion-grupos h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--azul);
+    border-radius: 10px;
+}
+
+/* ================= SECCIÓN ================= */
+.seccion-grupos {
+    padding: 60px 40px;
+    background: #f5f7fb;
+}
+
+.seccion-grupos h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--azul);
+}
+
+/* ================= CARRUSEL ================= */
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Flechas */
+.arrow {
+    background: var(--azul);
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    transition: transform .2s ease;
+    z-index: 10;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+.arrow.left {
+    margin-right: 15px;
+}
+
+.arrow.right {
+    margin-left: 15px;
+}
+
+/* Contenedor de cards */
+.cards-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+/* Cards */
+.card {
+    min-width: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    text-decoration: none;
+    color: var(--azul);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,.25);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+/* ================= MODAL PARA LOS CARD ================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    max-width: 600px;
+    width: 90%;
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+    text-align: center;
+    position: relative;
+    animation: modalIn .4s ease;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    color: var(--azul);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Cerrar */
+.close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: var(--azul);
+}
+
+/* Animación */
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ================= FOOTER ================= */
+.footer {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .bienvenida {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 90px 8%;
+    }
+
+    .bienvenida-texto h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bienvenida-texto p {
+        margin: 0 auto 20px;
+    }
+}
+
+/* ================= menui despegable ================= */
+.menu-hamburguesa {
+    position: absolute;
+    top: 55px;
+    right: 40px;
+    background: white;
+    width: 220px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.menu-hamburguesa.active {
+    display: flex;
+}
+/* ================= flechas del card de musica ================= */
+.arrow {
+    background: var(--azul);
+    color: white;
+    border: none;
+    font-size: 38px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.15);
+}
+
+.arrow.left {
+    margin-right: 15px;
+}
+
+.arrow.right {
+    margin-left: 15px;
+}
+/* ==========================
+   SECCIÓN VIDEO
+   ========================== */
+.video-section {
+    width: 100%;
+    padding: 120px 20px;
+    background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 100%);
+    text-align: center;
+}
+
+/* ==========================
+   TÍTULO DEL VIDEO
+   ========================== */
+.video-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #0b2c4d;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================
+   TEXTO DESCRIPTIVO
+   ========================== */
+.video-text {
+    font-size: 1.15rem;
+    max-width: 760px;
+    margin: 0 auto 50px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;          /* TEXTO JUSTIFICADO */
+    text-justify: inter-word;     /* espaciado natural */
+    letter-spacing: 0.2px;        /* elegancia */
+}
+@media (max-width: 768px) {
+    .video-text {
+        text-align: left;
+    }
+}
+
+
+/* ==========================
+   CONTENEDOR DEL VIDEO
+   ========================== */
+.video-container {
+    width: 90%;
+    max-width: 100%;   /* DE ESQUINA A ESQUINA */
+    margin: 0 auto;
+    border-radius: 0;  /* estilo banner */
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+.video-container video {
+    width: 80%;
+    height: 90vh;    /* altura agradable */
+    max-height: 450px;   /* evita que se vea gigante */
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .video-container video {
+        height: 40vh;
+        max-height: 300px;
+    }
+}
+
+
+
+/* EFECTO HOVER */
+.video-container:hover {
+    transform: scale(1.01);
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.35),
+        0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+/* ==========================
+   VIDEO
+   ========================== */
+.video-container video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================
+   ANIMACIÓN DE ENTRADA
+   ========================== */
+.video-container {
+    animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CONTENEDOR PRINCIPAL */
+.bienvenida {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  align-items: flex-start;
+}
+
+/* TEXTO */
+.bienvenida-texto {
+  flex: 2;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* IMÁGENES A LA DERECHA */
+.bienvenida-imagenes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ESTILO DE IMÁGENES */
+.bienvenida-imagenes img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bienvenida-imagenes img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* CAJA DE INFORMACIÓN */
+.info-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENIDO */
+.info-box div {
+  background: white;
+  padding: 40px 30px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  position: relative; /* 🔥 ESTO ES LA CLAVE */
+}
+
+/* BOTÓN CERRAR */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* FLECHA PARA SALIR */
+.flecha-salir {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.flecha-salir:hover {
+  transform: translateX(-5px);
+  color: #c0392b;
+}
+/* FONDO OSCURO */
+.info-box {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* CUADRO BLANCO */
+.info-contenedor {
+  background: white;
+  padding: 45px 30px 30px;
+  border-radius: 14px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  position: relative; /* 🔥 CLAVE PARA LA FLECHA */
+}
+
+/* FLECHA */
+.flecha-salir {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.flecha-salir:hover {
+  transform: translateX(-6px);
+  color: #c0392b;
+}
+/* ===============================
+   GALERÍA
+================================ */
+
+.galeria {
+    padding: 80px 6%;
+    max-width: 1200px;
+    margin: auto;
+    background: #fafafa;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: var(--azul, #0a3d62);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 36px;
+}
+
+/* ===============================
+   CARD
+================================ */
+
+.card {
+    background: linear-gradient(135deg, #ffffff, #f3f6f9);
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.25);
+}
+
+/* IMAGEN CARD */
+.card-img {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.12);
+}
+
+/* OVERLAY VER MÁS */
+.ver-mas {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 61, 98, 0.65);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.card:hover .ver-mas {
+    opacity: 1;
+}
+
+/* TÍTULO CARD */
+.card h3 {
+    padding: 22px 18px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+/* ===============================
+   MODAL
+================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* CONTENIDO MODAL */
+.modal-content {
+    position: relative;
+    background: #fff;
+    max-width: 1100px;
+    width: 95%;
+    padding: 60px 55px 50px;
+    border-radius: 26px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.45);
+    animation: modalEntrada 0.4s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes modalEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ❌ CERRAR MODAL */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 42px;
+    height: 42px;
+    background: #c62828;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.15);
+    background: #a61b1b;
+}
+
+/* TEXTO MODAL */
+.modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--azul, #0a3d62);
+    margin-bottom: 18px;
+}
+
+.modal-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===============================
+   GALERÍA MODAL
+================================ */
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+    margin-top: 40px;
+}
+
+.modal-gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.4s ease;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.06);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .modal-content {
+        padding: 40px 25px;
+    }
+
+    .modal-title {
+        font-size: 1.6rem;
+    }
+
+    .modal-text {
+        font-size: 1rem;
+    }
+
+}
+
+/* ===============================
+   GALERÍA MODAL (TAMAÑO IDEAL)
+================================ */
+
+.modal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 40px;
+}
+
+/* IMÁGENES NI CHICAS NI GRANDES */
+.modal-gallery img {
+    width: 380px;           /* tamaño equilibrado */
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.06);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .modal-gallery img {
+        width: 200px;       /* bien proporcionadas en celular */
+    }
+}
+
+/* ================= BOTONES FLOTANTES REDES ================= */
+
+.redes-flotantes {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.redes-flotantes a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.redes-flotantes a:hover {
+    transform: scale(1.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+    background: #25D366;
+}
+
+/* Facebook */
+.btn-facebook {
+    background: linear-gradient(135deg, #1877F2, #145dbf);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .redes-flotantes a {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+/* ================================================= */
+/* BOTONES PREMIUM */
+/* ================================================= */
+
+.btn-volver,
+.arrow{
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* brillo animado */
+.btn-volver::before,
+.arrow::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+    );
+
+    transition: .6s;
+}
+
+.btn-volver:hover::before,
+.arrow:hover::before{
+    left: 100%;
+}
+/* ================================================= */
+/* LOADER */
+/* ================================================= */
+
+#loader{
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #071a2d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+
+    transition: opacity .5s ease;
+}
+
+.spinner{
+    width: 70px;
+    height: 70px;
+
+    border: 6px solid rgba(255,255,255,.2);
+
+    border-top: 6px solid white;
+
+    border-radius: 50%;
+
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ================================================= */
+/* VIDEO PREMIUM RESPONSIVE */
+/*
+/* ================================================= */
+
+.video-section{
+    position: relative;
+    padding: 100px 20px;
+    overflow: hidden;
+    background:
+    linear-gradient(
+    180deg,
+    #f4f7fb 0%,
+    #ffffff 100%
+    );
+}
+
+/* EFECTO DECORATIVO */
+.video-section::before{
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: rgba(10,61,98,.08);
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -120px;
+
+    filter: blur(20px);
+}
+
+.video-section::after{
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    background: rgba(10,61,98,.06);
+
+    border-radius: 50%;
+
+    bottom: -100px;
+    left: -100px;
+
+    filter: blur(20px);
+}
+
+/* TITULO */
+.video-title{
+    position: relative;
+    z-index: 2;
+
+    font-size: clamp(2rem, 5vw, 3.2rem);
+
+    font-weight: 800;
+
+    color: #0a3d62;
+
+    margin-bottom: 18px;
+
+    letter-spacing: -.5px;
+}
+
+/* TEXTO */
+.video-text{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 55px;
+
+    font-size: clamp(1rem, 2vw, 1.1rem);
+
+    line-height: 1.9;
+
+    color: #555;
+
+    text-align: justify;
+}
+
+/* CONTENEDOR GENERAL */
+.video-container{
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background: #000;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.22),
+    0 8px 25px rgba(0,0,0,.12);
+
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+
+    z-index: 2;
+}
+
+/* BORDE BRILLANTE */
+.video-container::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: 28px;
+
+    padding: 2px;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,.6),
+    rgba(255,255,255,.1),
+    rgba(255,255,255,.4)
+    );
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+/* HOVER */
+.video-container:hover{
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.30),
+    0 12px 30px rgba(0,0,0,.18);
+}
+
+/* VIDEO */
+.video-container video{
+    width: 100%;
+    display: block;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    background: #000;
+}
+
+/* SOMBRA INFERIOR */
+.video-container::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 120px;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,.35),
+    transparent
+    );
+
+    pointer-events: none;
+}
+
+/* ANIMACIÓN */
+.video-container{
+    animation: videoFade 1s ease;
+}
+
+@keyframes videoFade{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media screen and (max-width: 992px){
+
+    .video-section{
+        padding: 80px 20px;
+    }
+
+    .video-container{
+        border-radius: 24px;
+    }
+
+    .video-text{
+        text-align: left;
+    }
+
+}
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media screen and (max-width: 768px){
+
+    .video-section{
+        padding: 70px 15px;
+    }
+
+    .video-title{
+        margin-bottom: 15px;
+    }
+
+    .video-text{
+        margin-bottom: 35px;
+        line-height: 1.8;
+    }
+
+    .video-container{
+        border-radius: 20px;
+    }
+
+}
+
+/* ================================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================================= */
+
+@media screen and (max-width: 480px){
+
+    .video-section{
+        padding: 60px 12px;
+    }
+
+    .video-container{
+        border-radius: 18px;
+    }
+
+    .video-container:hover{
+        transform: none;
+    }
+
+}
+/* ================================================= */
+/* NUESTRAS TRADICIONES SIGUEN VIVAS - RESPONSIVE */
+/* */
+/* ================================================= */
+/* CORREGIR ESPACIO ENTRE "NUESTRAS" Y "tradiciones" */
+
+.bienvenida-texto h2{
+    display: inline-block;
+    
+    max-width: 500px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    word-spacing: -8px; /* 🔥 reduce el espacio exagerado */
+
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* CONTENEDOR GENERAL */
+.bienvenida{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    padding: 100px 8%;
+
+    overflow: hidden;
+}
+/* ===================================== */
+/* EVITAR QUE EL TÍTULO SE SEPARE */
+/* ===================================== */
+
+.bienvenida-texto h2{
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    letter-spacing: 0;
+
+    word-spacing: 0;
+
+    white-space: normal;
+
+    display: block;
+
+    max-width: 420px;
+}
+
+/* CELULAR */
+@media (max-width: 768px){
+
+    .bienvenida-texto h2{
+        font-size: 2.2rem;
+
+        max-width: 100%;
+
+        word-break: keep-all;
+
+        overflow-wrap: normal;
+    }
+
+}
+/* TEXTO */
+.bienvenida-texto{
+    width: 100%;
+}
+
+.bienvenida-texto h2{
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.bienvenida-texto p{
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.9;
+    color: #444;
+
+    text-align: justify;
+
+    max-width: 100%;
+}
+
+/* CONTENEDOR DE IMÁGENES */
+.bienvenida-imagenes{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+/* IMÁGENES */
+.bienvenida-imagenes img{
+    width: 100%;
+    max-width: 420px;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+/* EFECTO HOVER */
+.bienvenida-imagenes img:hover{
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.25);
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media (max-width: 992px){
+
+    .bienvenida{
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 80px 7%;
+
+        text-align: center;
+    }
+
+    .bienvenida-texto h2::after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bienvenida-texto p{
+        text-align: center;
+    }
+
+    .bienvenida-imagenes{
+        grid-template-columns: repeat(2,1fr);
+
+        gap: 18px;
+    }
+
+    .bienvenida-imagenes img{
+        max-width: 100%;
+        height: 220px;
+    }
+}
+
+/* ================================================= */
+/* CELULARES */
+/* ================================================= */
+
+@media (max-width: 768px){
+
+    .bienvenida{
+        padding: 70px 22px;
+        gap: 35px;
+    }
+
+    .bienvenida-texto h2{
+        font-size: 2rem;
+    }
+
+    .bienvenida-texto p{
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .bienvenida-imagenes{
+        grid-template-columns: 1fr;
+    }
+
+    .bienvenida-imagenes img{
+        width: 100%;
+        max-width: 100%;
+
+        height: 220px;
+
+        border-radius: 20px;
+    }
+}
+
+/* ================================================= */
+/* CELULARES MUY PEQUEÑOS */
+/* ================================================= */
+
+@media (max-width: 480px){
+
+    .bienvenida{
+        padding: 60px 18px;
+    }
+
+    .bienvenida-texto h2{
+        font-size: 1.8rem;
+    }
+
+    .bienvenida-texto p{
+        font-size: .96rem;
+    }
+
+    .bienvenida-imagenes img{
+        height: 200px;
+        border-radius: 18px;
+    }
+}
+/* ========================================= */
+/* IMÁGENES MODERNAS Y ELEGANTES */
+/* AGREGA ESTO AL FINAL DE TU CSS */
+/* ========================================= */
+
+.bienvenida-imagenes{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+}
+
+/* ESTILO DE IMÁGENES */
+.bienvenida-imagenes img{
+    width: 100%;
+    max-width: 430px;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+
+    position: relative;
+
+    background: white;
+
+    padding: 6px;
+}
+
+/* EFECTO HOVER */
+.bienvenida-imagenes img:hover{
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 25px 55px rgba(0,0,0,.20);
+}
+
+/* EFECTO ESCALONADO */
+.bienvenida-imagenes img:nth-child(1){
+    margin-right: 35px;
+}
+
+.bienvenida-imagenes img:nth-child(2){
+    margin-left: 35px;
+}
+
+/* ========================================= */
+/* TABLET */
+/* ========================================= */
+
+@media (max-width: 992px){
+
+    .bienvenida-imagenes{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bienvenida-imagenes img{
+        width: 46%;
+        height: 220px;
+    }
+
+    .bienvenida-imagenes img:nth-child(1),
+    .bienvenida-imagenes img:nth-child(2){
+        margin: 0;
+    }
+}
+
+/* ========================================= */
+/* CELULAR */
+/* ========================================= */
+
+@media (max-width: 768px){
+
+    .bienvenida-imagenes{
+        gap: 18px;
+    }
+
+    .bienvenida-imagenes img{
+        width: 100%;
+        max-width: 100%;
+
+        height: 220px;
+
+        border-radius: 24px;
+    }
+}
+
+/* ========================================= */
+/* CELULARES PEQUEÑOS */
+/* ========================================= */
+
+@media (max-width: 480px){
+
+    .bienvenida-imagenes img{
+        height: 190px;
+
+        border-radius: 20px;
+    }
+}
+/* ========================================= */
+/* LOGOS RESPONSIVE */
+/* AGREGA ESTO AL FINAL DE TU CSS */
+/* ========================================= */
+
+/* CONTENEDOR */
+.logos-bar{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+/* LOGOS */
+.logo img{
+    width: auto;
+
+    max-width: 100%;
+
+    height: clamp(70px, 10vw, 120px);
+
+    object-fit: contain;
+
+    transition: transform .3s ease;
+}
+
+/* HOVER */
+.logo img:hover{
+    transform: scale(1.05);
+}
+
+/* POSICIONES */
+.logo.left{
+    justify-self: start;
+}
+
+.logo.center{
+    justify-self: center;
+}
+
+.logo.right{
+    justify-self: end;
+}
+
+/* ========================================= */
+/* TABLET */
+/* ========================================= */
+
+@media (max-width: 768px){
+
+    .header{
+        padding: 15px 20px;
+    }
+
+    .logos-bar{
+        gap: 10px;
+    }
+
+    .logo img{
+        height: 80px;
+    }
+}
+
+/* ========================================= */
+/* CELULARES */
+/* ========================================= */
+
+@media (max-width: 480px){
+
+    .header{
+        padding: 12px 12px;
+    }
+
+    .logos-bar{
+        gap: 5px;
+    }
+
+    .logo img{
+        height: 60px;
+    }
+}
+/* ================================================= */
+/* CARDS PREMIUM RESPONSIVE */
+/* AGREGA ESTO AL FINAL DE TU CSS */
+/* ================================================= */
+
+/* CONTENEDOR GENERAL */
+.cards-container{
+    display: flex;
+    gap: 28px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    padding: 20px 10px 30px;
+
+    scrollbar-width: none;
+}
+
+.cards-container::-webkit-scrollbar{
+    display: none;
+}
+
+/* ================================================= */
+/* CARD */
+/* ================================================= */
+
+.card{
+    min-width: 300px;
+    max-width: 320px;
+
+    background:
+    linear-gradient(
+    145deg,
+    #ffffff,
+    #f5f8fc
+    );
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    position: relative;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.10);
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+    border: 1px solid rgba(255,255,255,.8);
+
+    backdrop-filter: blur(10px);
+}
+
+/* EFECTO BRILLO */
+.card::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.55),
+    transparent
+    );
+
+    transition: .7s ease;
+
+    z-index: 2;
+}
+
+.card:hover::before{
+    left: 140%;
+}
+
+/* HOVER */
+.card:hover{
+    transform:
+    translateY(-12px)
+    scale(1.02);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.18);
+}
+
+/* ================================================= */
+/* IMAGEN */
+/* ================================================= */
+
+.card img{
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.card:hover img{
+    transform: scale(1.08);
+}
+
+/* ================================================= */
+/* TEXTO */
+/* ================================================= */
+
+.card h3{
+    font-size: 1.25rem;
+
+    color: var(--azul);
+
+    margin: 22px 22px 12px;
+
+    font-weight: 700;
+}
+
+.card p{
+    font-size: .97rem;
+
+    line-height: 1.7;
+
+    color: #555;
+
+    padding: 0 22px 25px;
+}
+
+/* ================================================= */
+/* MODAL */
+/* ================================================= */
+
+.modal-content{
+    width: 92%;
+    max-width: 750px;
+
+    max-height: 88vh;
+
+    overflow-y: auto;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.30);
+
+    animation: modalShow .4s ease;
+}
+
+/* IMAGEN MODAL */
+.modal-content img{
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    margin-bottom: 25px;
+}
+
+/* TITULO */
+.modal-content h3{
+    font-size: 2rem;
+   
+    margin-bottom: 18px;
+}
+
+/* TEXTO */
+.modal-content p{
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #444;
+}
+
+/* BOTÓN CERRAR */
+.close{
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #f2f2f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+
+    transition: .3s ease;
+}
+
+.close:hover{
+    background: var(--azul);
+    color: white;
+}
+
+/* ================================================= */
+/* ANIMACIÓN */
+/* ================================================= */
+
+@keyframes modalShow{
+    from{
+        opacity: 0;
+        transform: scale(.9) translateY(25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media (max-width: 992px){
+
+    .card{
+        min-width: 270px;
+        max-width: 280px;
+    }
+
+    .card img{
+        height: 190px;
+    }
+
+    .modal-content{
+        max-width: 680px;
+    }
+
+}
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media (max-width: 768px){
+
+    .cards-container{
+        gap: 18px;
+        padding: 15px 5px 25px;
+    }
+
+    .card{
+        min-width: 85%;
+        max-width: 85%;
+
+        border-radius: 24px;
+    }
+
+    .card img{
+        height: 200px;
+    }
+
+    .card h3{
+        font-size: 1.15rem;
+    }
+
+    .card p{
+        font-size: .95rem;
+    }
+
+    /* MODAL */
+    .modal-content{
+        width: 94%;
+
+        padding: 25px;
+
+        border-radius: 24px;
+    }
+
+    .modal-content img{
+        height: 220px;
+        border-radius: 18px;
+    }
+
+    .modal-content h3{
+        font-size: 1.5rem;
+    }
+
+    .modal-content p{
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+/* ================================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================================= */
+
+@media (max-width: 480px){
+
+    .card{
+        min-width: 92%;
+        max-width: 92%;
+    }
+
+    .card img{
+        height: 180px;
+    }
+
+    .modal-content{
+        padding: 22px 18px;
+    }
+
+    .modal-content img{
+        height: 190px;
+    }
+
+    .modal-content h3{
+        font-size: 1.35rem;
+    }
+
+    .modal-content p{
+        font-size: .95rem;
+    }
+}
+/* ========================================= */
+/* CENTRAR CARDS EN CELULAR */
+/* AGREGA ESTO AL FINAL DE TU CSS */
+/* ========================================= */
+
+@media (max-width: 768px){
+
+    .carousel{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cards-container{
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: stretch;
+
+        gap: 18px;
+
+        padding: 20px 12px;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .card{
+        min-width: 88%;
+
+        max-width: 88%;
+
+        margin: 0 auto;
+
+        scroll-snap-align: center;
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 480px){
+
+    .cards-container{
+        padding: 20px 8px;
+    }
+
+    .card{
+        min-width: 92%;
+        max-width: 92%;
+    }
+
+}
+/* ========================================= */
+/* EFECTO DE LUZ HERO */
+/* ========================================= */
+
+.hero::before{
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,.18) 0%,
+        transparent 70%
+    );
+
+    top: -150px;
+    right: -120px;
+
+    z-index: 0;
+
+    animation: luzHero 8s ease-in-out infinite;
+}
+
+.hero::after{
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,.10) 0%,
+        transparent 70%
+    );
+
+    bottom: -100px;
+    left: -80px;
+
+    z-index: 0;
+
+    animation: luzHero2 10s ease-in-out infinite;
+}
+
+.hero *{
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes luzHero{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(25px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes luzHero2{
+    0%{
+        transform: translateX(0px);
+    }
+
+    50%{
+        transform: translateX(25px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+/* ========================================= */
+/* TITULOS PREMIUM */
+/* ========================================= */
+
+h1, h2{
+    letter-spacing: -.5px;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.08);
+}
+
+.seccion-grupos h2,
+.galeria h2,
+.video-title,
+.bienvenida-texto h2{
+    position: relative;
+}
+
+/* LINEA BRILLO */
+.seccion-grupos h2::before,
+.galeria h2::before,
+.video-title::before,
+.bienvenida-texto h2::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 5px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #0a3d62,
+    #4da3ff
+    );
+
+    bottom: -14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 20px;
+}
+/* ========================================= */
+/* IMAGENES FLOTANTES */
+/* ========================================= */
+
+.bienvenida-imagenes img{
+    animation: flotar 5s ease-in-out infinite;
+}
+
+.bienvenida-imagenes img:nth-child(2){
+    animation-delay: 2s;
+}
+
+@keyframes flotar{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+/* ========================================= */
+/* FOOTER PREMIUM */
+/* ========================================= */
+
+.footer{
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+    linear-gradient(
+    135deg,
+    #071a2d,
+    #0a3d62
+    );
+}
+
+.footer::before{
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(255,255,255,.05);
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -120px;
+}
+/* ========================================= */
+/* REVEAL SCROLL */
+/* ========================================= */
+
+.reveal{
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ========================================= */
+/* TRANSICIONES SUAVES */
+/* ========================================= */
+
+img,
+button,
+a,
+.card,
+.video-container{
+    transition: all .35s ease;
+}
+/* ========================================= */
+/* HACER TRANSPARENTES ALGUNAS SECCIONES */
+/* ========================================= */
+
+.bienvenida,
+.galeria,
+.video-section,
+.seccion-grupos{
+
+    background: transparent !important;
+}
+
+/* ================= NAV PERFECTAMENTE ALINEADO menu y boton================= */
+
+.nav{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 18px;
+    z-index: 1000;
+}
+
+/* BOTÓN VOLVER */
+.btn-volver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 42px;
+    padding: 0 18px;
+
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 28px;
+    padding: 0;
+}
+
+/* CELULAR */
+@media (max-width:768px){
+
+    .nav{
+        top: 15px;
+        padding: 0 14px;
+    }
+
+    .btn-volver{
+        height: 38px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .hamburger{
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+}
+
+/* ================================================= */
+/* BOTONES PREMIUM */
+/* ================================================= */
+
+.btn-volver,
+.arrow{
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* brillo animado */
+.btn-volver::before,
+.arrow::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+    );
+
+    transition: .6s;
+}
+
+.btn-volver:hover::before,
+.arrow:hover::before{
+    left: 100%;
+}
+
+/* foto en la parte de abajo de los logos */
+/* ========================================= */
+/* OSCURECER UN POCO MÁS EL HERO */
+/* AGREGA ESTO AL FINAL DE TU CSS */
+/* ========================================= */
+
+.hero{
+    background:
+    linear-gradient(
+    to bottom,
+
+    rgba(0,0,0,.68) 0%,
+
+    rgba(0,0,0,.40) 30%,
+
+    rgba(0,0,0,.22) 60%,
+
+    rgba(0,0,0,.20) 100%
+    ),
+
+    url("img/cultura1.PNG") !important;
+
+    background-size: cover !important;
+
+    background-position: center center !important;
+
+    background-repeat: no-repeat !important;
+}
+/* TEXTO HERO */
+
+.hero-text{
+
+    text-align: center;
+
+    color: white;
+
+    z-index: 2;
+
+    padding: 20px;
+}
+
+.hero-text h1{
+
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    font-weight: 800;
+
+    text-shadow:
+    0 4px 15px rgba(0,0,0,.25);
+}
+
+.hero-text p{
+
+    font-size: 1.2rem;
+
+    max-width: 700px;
+
+    margin: 15px auto 0;
+
+    line-height: 1.7;
+
+    text-shadow:
+    0 2px 10px rgba(0,0,0,.25);
+}
+/* ================================================= */
+/* NAV SUPERIOR FIJO Y LIMPIO */
+/* AGREGA ESTO AL FINAL DE TU CSS */
+/* ================================================= */
+
+.nav{
+    position: absolute;
+
+    top: 20px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 99999;
+}
+
+/* ================================================= */
+/* BOTÓN VOLVER */
+/* ================================================= */
+
+.btn-volver{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 44px;
+
+    padding: 0 20px;
+
+    border-radius: 30px;
+
+    border: 2px solid rgba(255,255,255,.9);
+
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(5px);
+
+    color: white;
+
+    font-size: .95rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+
+    transition:
+    background .3s ease,
+    color .3s ease,
+    border .3s ease;
+}
+
+/* HOVER */
+.btn-volver:hover{
+
+    background: white;
+
+    color: #0a3d62;
+
+    border-color: white;
+
+    transform: none !important;
+}
+
+/* CLICK */
+.btn-volver:active{
+
+    transform: none !important;
+
+    scale: 1 !important;
+}
+
+/* ================================================= */
+/* BOTÓN HAMBURGUESA */
+/* ================================================= */
+
+.hamburger{
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    margin: 0;
+
+    line-height: 1;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+
+    transition: color .3s ease;
+}
+
+/* HOVER */
+.hamburger:hover{
+
+    color: #dbefff;
+
+    transform: none !important;
+}
+
+/* CLICK */
+.hamburger:active{
+
+    transform: none !important;
+
+    scale: 1 !important;
+}
+
+/* ================================================= */
+/* MENÚ DESPLEGABLE */
+/* ================================================= */
+
+.menu-hamburguesa{
+
+    position: absolute;
+
+    top: 60px;
+    right: 20px;
+
+    width: 210px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 12px;
+
+    display: none;
+    flex-direction: column;
+
+    gap: 5px;
+
+    box-shadow: none !important;
+
+    border: 1px solid #ececec;
+
+    animation: aparecerMenu .25s ease;
+}
+
+/* ACTIVO */
+.menu-hamburguesa.active{
+    display: flex;
+}
+
+/* LINKS */
+.menu-hamburguesa a{
+
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: #0a3d62;
+
+    font-weight: 600;
+
+    transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+/* HOVER */
+.menu-hamburguesa a:hover{
+
+    background: #f3f7fb;
+}
+
+/* ================================================= */
+/* ANIMACIÓN */
+/* ================================================= */
+
+@keyframes aparecerMenu{
+
+    from{
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================= */
+/* ELIMINAR EFECTOS QUE MUEVEN */
+/* ================================================= */
+
+.btn-volver::before,
+.hamburger::before,
+.arrow::before{
+    display: none !important;
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 768px){
+
+    .nav{
+        top: 15px;
+        padding: 0 15px;
+    }
+
+    .btn-volver{
+        height: 42px;
+        padding: 0 16px;
+        font-size: .9rem;
+    }
+
+    .hamburger{
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+    }
+
+    .menu-hamburguesa{
+        top: 55px;
+        right: 15px;
+        width: 190px;
+    }
+
+}

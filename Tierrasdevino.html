@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tierras de Vinos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para iconos de redes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="tierrasdevino.css">
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+    
+<header class="header">
+   <!-- BARRA BLANCA SUPERIOR -->
+   <div class="logos-bar">
+
+        <div class="logo left">
+            <img src="img/Logo_Ayundamiento.png" alt="Ayuntamiento de Pabellón">
+        </div>
+
+        <div class="logo center">
+            <img src="img/logo_fiestasteatro.png" alt="Teatro del Pueblo">
+        </div>
+
+        <div class="logo right">
+            <img src="img/logo_ferias.png" alt="Feria Regional">
+        </div>
+
+    </div>
+</header>
+
+<section class="hero">
+
+    <!-- NAV -->
+    <div class="hero-nav">
+
+        <!-- BOTON VOLVER -->
+        <a href="index.html" class="btn-volver">
+            ← Volver
+        </a>
+
+        <!-- BOTON MENU -->
+        <button class="hamburger" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <!-- MENU -->
+        <div class="menu-hamburguesa" id="menu">
+
+            <a href="#sobre">Inicio</a>
+            <a href="#ruta">Ruta del vino</a>
+            <a href="#vinicolas">Vinícolas</a>
+            <a href="#galeria">Galería</a>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENIDO HERO -->
+    <div class="hero-content">
+        <h1>TIERRAS DE VINOS</h1>
+        <p>
+            Explora cada una de las vinícolas que forman parte de esta experiencia única.
+            Vive el sabor, la tradición y la cultura de nuestra tierra.
+        </p>
+        <a href="#actividades" class="hero-btn">Ver Todo</a>
+    </div>
+</section>
+
+<!-- SOBRE LA FERIA -->
+<section id="sobre" class="section white">
+    <h2>Bienvenidos a Tierras de Vinos</h2>
+    <p>
+        Te damos la más cordial bienvenida a Tierras de Vinos, una iniciativa que celebra 
+        la riqueza vitivinícola de Pabellón de Arteaga. A través de esta guía local podrás 
+        descubrir los espacios más destacados para disfrutar de los mejores vinos de la región, 
+        acompañados por la calidez de nuestra gente y un sabor auténtico. Explora y déjate 
+        envolver por la experiencia enológica que ofrece nuestro municipio.
+    </p>
+
+    <!-- Contenedor con imagen -->
+    <div class="imagen-bienvenida">
+        <img src="img/vin.jpg" alt="Experiencia del vino">
+    </div>
+</section>
+
+<!-- RUTA DEL VINO -->
+<section id="ruta-vino" class="section ruta-vino">
+    <h2>Ruta del Vino</h2>
+    <p>Descubre las vinícolas más importantes de Pabellón de Arteaga</p>
+    <div id="map" style="height:400px;"></div>
+
+    <div class="panel-vinicola">
+        <button onclick="moverMapa(22.176, -102.272)">Vinícola El Sarmiento</button>
+        <button onclick="moverMapa(22.140, -102.260)">Vinícola El Aguaje</button>
+        <button onclick="moverMapa(22.178, -102.295)">Hacienda de Letras</button>
+        <button onclick="moverMapa(22.160, -102.280)">Vinícola Santa Elena</button>
+        <button onclick="moverMapa(22.170, -102.250)">Bodegas Origen</button>
+         <button onclick="moverMapa(22.106, -102.301)"> Viñas Las Cruces</button>
+    </div>
+</section>
+
+<!-- NUEVA SECCIÓN VINÍCOLAS -->
+<section id="navega" class="navega-section">
+    <h2>Navega todas las Vinícolas</h2>
+
+    <div class="cards-container">
+        <!-- Card 1 -->
+        <a href="sarmien.html" class="card-link">
+            <div class="card">
+                <img src="img/vinicola_sarmiento.png" alt="Vinícola El Sarmiento">
+                <h3>Vinícola El Sarmiento</h3>
+                <p>Tradición y calidad en cada botella.</p>
+            </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="letras.html" class="card-link">
+            <div class="card">
+                <img src="img/vinicolaLetras.png" alt="Hacienda de Letras">
+                <h3>Hacienda de Letras</h3>
+                <p>Historia, arquitectura y vino premium.</p>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="vinos2.html" class="card-link">
+            <div class="card">
+                <img src="img/bedegasorigen.png" alt="Bodegas Origen">
+                <h3>Bodegas Origen</h3>
+                <p>Innovación y pasión por el vino.</p>
+            </div>
+        </a>
+         <!-- Card 4 -->
+        <a href="aguaje.html" class="card-link">
+            <div class="card">
+                <img src="img/vinicolaelaguaje.png" alt="Vinicola El Aguaje">
+                <h3>vinicola El Aguaje</h3>
+                <p>Innovación y pasión por el vino.</p>
+            </div>
+        </a>
+          <!-- Card 5 -->
+        <a href="santa.html" class="card-link">
+            <div class="card">
+                <img src="img/santaelena.png" alt="Vinicola Santa Elena">
+                <h3>vinicola Santa Elena</h3>
+                <p>Innovación y pasión por el vino.</p>
+            </div>
+        </a>
+           <!-- Card 6 -->
+        <a href="cruces.html" class="card-link">
+            <div class="card">
+                <img src="img/viñascruces_convertida.png" alt="Vinicola Viña las Cruces">
+                <h3>Vinicola Viña las Cruces</h3>
+                <p>Innovación y pasión por el vino.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Botones de redes flotantes -->
+<div class="redes-flotantes">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-whatsapp" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/TuPagina" target="_blank" class="btn-facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+
+<footer class="footer">
+    <p>© 2025 Feria Regional de Pabellón de Arteaga</p>
+</footer>
+
+<!-- JS GALERIA -->
+<script src="galeria.js"></script>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+var map = L.map('map').setView([22.1500, -102.2667], 12);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+var lugares = [
+    {nombre: "Vinícola El Sarmiento", lat: 22.176, lng: -102.272, img: "img/foto4.jpeg", desc: "Historia y vino premium."},
+    {nombre: "Hacienda de Letras", lat: 22.178, lng: -102.295, img: "img/letras2.PNG",desc: "Innovación y pasión por el vino."},
+    {nombre: "Bodegas Origen", lat: 22.170, lng: -102.250, img: "img/bodega5.jpg",desc: "Innovación y pasión por el vino."},
+    {nombre: "Vinícola Santa Elena", lat: 22.160, lng: -102.280, img: "img/santa4.PNG",desc: "Innovación y pasión por el vino."},
+    {nombre: "Vinícola El Aguaje", lat: 22.140, lng: -102.260, img: "img/aguaje2.jpg",desc: "Innovación y pasión por el vino."},
+    { nombre: "Viñas Las Cruces", lat: 22.106, lng: -102.301, img: "img/cruces3.PNG",desc: "Innovación y pasión por el vino."}
+];
+
+lugares.forEach(function(lugar) {
+    L.marker([lugar.lat, lugar.lng])
+        .addTo(map)
+        .bindPopup(`
+            <div style="text-align:center;">
+                <img src="${lugar.img}" style="width:100px; border-radius:10px;">
+                <h4>${lugar.nombre}</h4>
+                <p>${lugar.desc}</p>
+                <button onclick="window.open('https://www.google.com/maps?q=${lugar.lat},${lugar.lng}')">Ver ubicación</button>
+            </div>
+        `);
+});
+
+function moverMapa(lat, lng) {
+    map.setView([lat, lng], 14);
+}
+
+function toggleModo() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
+});
+</script>
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+</body>
+</html>

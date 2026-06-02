@@ -1,0 +1,3090 @@
+:root{
+--azul:#0a3d62;
+--blanco:#ffffff;
+}
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f8f9fb;
+color:#222;
+}
+
+
+/* ================= HEADER ================= */
+.header {
+    background-color: var(--blanco);
+    padding: 20px 40px;
+}
+
+.logos-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
+}
+
+.logo.left { justify-self: start; }
+.logo.center { justify-self: center; }
+.logo.right { justify-self: end; }
+
+/* BARRA AZUL */
+
+.nav{
+background:var(--azul);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+position:relative;
+}
+
+
+/* BOTON VOLVER */
+
+.btn-volver{
+color:var(--blanco);
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+
+/* HAMBURGUESA */
+
+.hamburger{
+background:none;
+border:none;
+font-size:28px;
+color:var(--blanco);
+cursor:pointer;
+}
+
+
+
+/* MENU */
+
+.menu-hamburguesa{
+display:none;
+position:absolute;
+right:20px;
+top:55px;
+background:var(--blanco);
+border-radius:8px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.menu-hamburguesa a{
+display:block;
+padding:12px 20px;
+text-decoration:none;
+color:var(--azul);
+font-weight:600;
+}
+
+.menu-hamburguesa a:hover{
+background:#f2f2f2;
+}
+
+.menu-hamburguesa.active{
+display:block;
+}
+
+
+/* HERO */
+
+.hero{
+height:60vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0a3d62,#0a3d62);
+color:white;
+text-align:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    color:#ffff;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    color:#ffff;
+}
+/* ================= SECCIONES ================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.section h2{
+    font-size:2.2rem;
+    margin-bottom:40px;
+    color:#0a3d62;
+}
+
+/* ================= HISTORIA ================= */
+
+.historia{
+    background: linear-gradient(180deg,#f7f7f7,#ffffff);
+    padding: 80px 10%;
+}
+
+/* TITULO */
+
+.titulo-historia{
+    text-align: center;
+    font-size: 40px;
+    color: #8B0000;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* CONTENEDOR */
+
+.historia-contenedor{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* TEXTO */
+
+.historia-texto{
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* IMAGEN */
+
+.historia-imagen{
+    flex: 1;
+    text-align: center;
+}
+
+.historia-imagen img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform .4s;
+}
+
+/* EFECTO HOVER */
+
+.historia-imagen img:hover{
+    transform: scale(1.05);
+}
+
+/* ANIMACION */
+
+.section{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.section.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ================= SECCION VINOS ================= */
+
+.vinos{
+padding:80px 10%;
+background:linear-gradient(180deg, #f8f8f8, #ffffff);
+text-align:center;
+}
+
+/* TITULO */
+
+.titulo-vinos{
+font-size:45px;
+margin-bottom:50px;
+color:#7b1e3b;
+font-family: 'Segoe UI', serif;
+letter-spacing:1px;
+}
+
+/* CONTENEDOR */
+
+.contenedor-vinos{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:30px;
+align-items:start;
+}
+
+/* CARD PREMIUM */
+
+.vino-card{
+background: rgba(255,255,255,0.85);
+backdrop-filter: blur(10px);
+padding:25px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+transition: all 0.4s ease;
+display:flex;
+flex-direction:column;
+height:100%;
+position:relative;
+overflow:hidden;
+}
+
+/* EFECTO HOVER */
+
+.vino-card:hover{
+transform: translateY(-12px) scale(1.02);
+box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* EFECTO BRILLO */
+
+.vino-card::after{
+content:"";
+position:absolute;
+top:-100%;
+left:-100%;
+width:200%;
+height:200%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.4),
+transparent
+);
+transform:rotate(25deg);
+transition:0.5s;
+}
+
+.vino-card:hover::after{
+top:100%;
+left:100%;
+}
+
+/* BADGE */
+
+.badge{
+position:absolute;
+top:15px;
+left:15px;
+background:#d4af37;
+color:#fff;
+font-size:12px;
+padding:5px 10px;
+border-radius:20px;
+font-weight:600;
+}
+
+/* IMAGEN */
+
+.vino-imagen{
+overflow:hidden;
+border-radius:12px;
+background:#fff;
+padding:10px;
+}
+
+.vino-imagen img{
+width:100%;
+height:240px;
+object-fit:contain;
+transition:0.4s;
+}
+
+.vino-card:hover img{
+transform:scale(1.1) rotate(1deg);
+}
+
+/* TEXTO */
+
+.vino-card h3{
+margin-bottom:10px;
+color:#333;
+font-size:18px;
+font-weight:600;
+}
+
+.vino-card p{
+color:#666;
+font-size:14px;
+line-height:1.6;
+}
+
+/* PRECIO Y RATING */
+
+.precio{
+color:#7b1e3b;
+font-weight:bold;
+margin-top:5px;
+}
+
+.rating{
+color:#d4af37;
+font-size:14px;
+margin-bottom:10px;
+}
+
+/* BOTON */
+
+.btn-info{
+display:inline-block;
+background:linear-gradient(135deg, #7b1e3b, #b03a5b);
+color:white;
+padding:12px 22px;
+border-radius:30px;
+cursor:pointer;
+margin-top:15px;
+font-size:14px;
+font-weight:500;
+letter-spacing:0.5px;
+transition: all 0.3s ease;
+}
+
+.btn-info:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(123,30,59,0.3);
+}
+
+/* INPUT OCULTO */
+
+.vino-card input{
+display:none;
+}
+
+/* INFO OCULTA (ANIMACION MEJORADA) */
+
+.vino-info{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.5s ease, opacity 0.3s ease;
+opacity:0;
+text-align:left;
+margin-top:10px;
+}
+
+/* CUANDO SE ABRE */
+
+.vino-card input:checked ~ .vino-info{
+max-height:500px;
+opacity:1;
+}
+
+/* ANIMACION SCROLL */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition: all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+.contenedor-vinos{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:600px){
+.contenedor-vinos{
+grid-template-columns:1fr;
+}
+}
+/* ================= SECCION MAPA ================= */
+
+.seccion-mapa{
+    background:linear-gradient(135deg,#ffff,#ffff);
+    padding:90px 20px;
+    color:#0a3d62;
+    display:flex;
+    justify-content:center;
+}
+
+.contenido-mapa{
+    max-width:900px;
+    text-align:center;
+}
+
+.contenido-mapa h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.contenido-mapa p{
+    font-size:1.1rem;
+    margin-bottom:35px;
+    opacity:.95;
+}
+
+/* CONTENEDOR MAPA */
+
+.mapa-container{
+    background:#eee;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* BOTON */
+
+.btn-mapa{
+    display:inline-block;
+    margin-top:30px;
+    background:#ff6600;
+    color:white;
+    padding:14px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-mapa:hover{
+    background:#e65c00;
+    transform:translateY(-3px);
+}
+
+/* ================= EFECTO SUAVE EN SECCIONES ================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+    text-align:center;
+}
+
+/* ================= HISTORIA MAS BONITA ================= */
+
+.historia-container{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:50px;
+    justify-content:center;
+}
+
+.historia-texto{
+    flex:1;
+    min-width:280px;
+    text-align:left;
+    font-size:1.05rem;
+}
+
+.historia-imagen img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    transition:transform .4s;
+}
+
+.historia-imagen img:hover{
+    transform:scale(1.05);
+}
+/* ================= REDES ================= */
+
+.redes-flotantes{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:1000;
+}
+
+.redes-flotantes a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:60px;
+    height:60px;
+    color:#fff;
+    font-size:26px;
+    border-radius:50%;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    transition:all .3s;
+}
+
+.redes-flotantes a:hover{
+    transform:scale(1.1);
+}
+
+.btn-whatsapp{background:#25D366;}
+.btn-facebook{background:#1877f2;}
+
+.btn-whatsapp:hover{background:#1ebe5d;}
+.btn-facebook:hover{background:#1665c1;}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#0a3d62;
+    color:#fff;
+    text-align:center;
+    padding:30px 10px;
+    margin-top:60px;
+}
+
+.footer p{
+    opacity:.9;
+}
+
+/* ================= BOTON VOLVER ================= */
+
+.btn-volver{
+    background:#0a3d62;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-volver:hover{
+    background:#0a3d62;
+}
+.vinos{
+    padding:80px 8%;
+    background:linear-gradient(to bottom,#fafafa,#f0f0f0);
+    position:relative;
+}
+
+/* uvas decorativas */
+
+.vinos{
+    position:relative;
+}
+
+/* uvas izquierda */
+
+.vinos::before{
+    content:"";
+    position:absolute;
+    top:30px;
+    left:30px;
+    width:160px;
+    height:160px;
+    background:url("img/uva.png") no-repeat center;
+    background-size:contain;
+    opacity:0.45;
+    animation:flotar 6s ease-in-out infinite;
+}
+
+/* uvas derecha */
+
+.vinos::after{
+    content:"";
+    position:absolute;
+    bottom:30px;
+    right:30px;
+    width:160px;
+    height:160px;
+    background:url("img/uva.png") no-repeat center;
+    background-size:contain;
+    opacity:0.45;
+}
+
+/* animacion */
+
+@keyframes flotar{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+html{
+scroll-behavior:smooth;
+}
+/* ================= Animascion para cargar la pagina ================= */
+.section{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.section.visible{
+opacity:1;
+transform:translateY(0);
+}
+/* ================= Animacion bonita en los vinos ================= */
+.vino-card{
+background:white;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.vino-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+/* ================= separadores elegantes entre secciones ================= */
+.titulo-historia::after,
+.titulo-vinos::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#0a3d62;
+margin:15px auto;
+border-radius:5px;
+}
+/* ================= fondo elegantes para los vinos ================= */
+.vinos{
+background:linear-gradient(to bottom,#fafafa,#f3f3f3);
+}
+/* ================= animacion a las botellas  ================= */
+.vino-imagen img{
+transition:0.4s;
+}
+
+.vino-card:hover img{
+transform:scale(1.08);
+}
+
+/* este es el estilo de la galeria de fotos   */
+/* ================= GALERIA CARRUSEL ================= */
+
+.galeria{
+    text-align: center;
+    padding: 80px 20px;
+    background: #f4f6f9;
+}
+
+/* ================= TITULO GALERIA ================= */
+
+.galeria h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0a3d62;
+    position: relative;
+}
+
+.galeria h2::after{
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #0a3d62;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* ================= GALERIA BONITA ================= */
+
+.galeria{
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(180deg,#f8f9fb,#eef1f6);
+}
+
+.titulo-galeria{
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #0a3d62;
+    font-weight: 700;
+}
+
+.carrusel{
+    overflow: hidden;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.carrusel-track{
+    display: flex;
+    gap: 25px;
+    animation: carrusel 25s linear infinite;
+}
+
+.carrusel img{
+    width: 420px;      /* imágenes más grandes */
+    height: 280px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* efecto hover bonito */
+.carrusel img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* animación */
+@keyframes carrusel{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+/* ================= VISOR DE IMAGEN ================= */
+
+.visor{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.visor-img{
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.cerrar{
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+/* animacion cuando aparece las secciones  */
+.section{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* animacion efecto elegantes para los card de los vinos  */
+.vino-card{
+transition:transform 0.4s, box-shadow 0.4s;
+}
+
+.vino-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+/* ANIMACION SCROLL */
+
+.section{
+opacity:0;
+transform: translateY(60px);
+transition: all 1s ease;
+}
+
+.section.visible{
+opacity:1;
+transform: translateY(0);
+}
+.hero-content h1{
+font-size:60px;
+animation: aparecerTitulo 1.5s ease;
+}
+
+.hero-content p{
+font-size:22px;
+margin-top:10px;
+animation: aparecerSubtitulo 2s ease;
+}
+
+@keyframes aparecerTitulo{
+0%{
+opacity:0;
+transform:translateY(-40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes aparecerSubtitulo{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+img{
+transition: all .5s ease;
+}
+
+img:hover{
+transform: scale(1.05);
+filter: brightness(1.1);
+}
+.btn-mapa,
+.btn-volver,
+.redes-flotantes a{
+transition: all .3s ease;
+}
+
+.btn-mapa:hover{
+transform: translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.redes-flotantes a:hover{
+transform: scale(1.15);
+}
+.menu-hamburguesa{
+opacity:0;
+transform: translateY(-20px);
+transition: all .4s ease;
+}
+
+.menu-hamburguesa.active{
+opacity:1;
+transform: translateY(0);
+}
+/* ================= MEJORAS RESPONSIVE SIN ROMPER DISEÑO ================= */
+
+/* Evita que todo se desborde */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Evita scroll horizontal feo */
+body {
+    overflow-x: hidden;
+}
+
+/* Mejora visual en tablets */
+@media (max-width: 1024px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        height: 90px;
+    }
+
+    .bienvenida {
+        gap: 40px;
+    }
+}
+
+/* Mejora en celulares */
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        padding: 100px 15px;
+        background-size: cover; /* refuerzo */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .nav {
+        padding: 0 20px;
+    }
+
+    .logos-bar {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .logo.left,
+    .logo.center,
+    .logo.right {
+        justify-self: center;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .bienvenida {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .bienvenida-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        min-width: 240px;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn-volver {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .hamburger {
+        font-size: 26px;
+    }
+}
+/* ================= SOLUCIÓN LOGOS FIJOS ================= */
+@media (max-width: 768px) {
+
+    /* Mantener los 3 logos en línea SIEMPRE */
+    .logos-bar {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo.left {
+        order: 1;
+    }
+
+    .logo.center {
+        order: 2;
+    }
+
+    .logo.right {
+        order: 3;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+}
+
+/* ================= ORDEN TEXTO PRIMERO ================= */
+@media (max-width: 768px) {
+
+    .bienvenida {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* TEXTO PRIMERO */
+    .bienvenida-texto {
+        order: 1;
+    }
+
+    /* IMAGEN DESPUÉS */
+    .bienvenida-img {
+        order: 2;
+    }
+}
+
+/* ================= MEJOR AJUSTE VISUAL ================= */
+@media (max-width: 768px) {
+
+    .bienvenida-texto {
+        text-align: center;
+    }
+
+    .bienvenida-texto p {
+        padding: 0 10px;
+    }
+
+    .bienvenida-img img {
+        margin-top: 20px;
+    }
+}
+/* ================= HERO PERFECTO EN CELULAR ================= */
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto; /* quita el corte feo */
+        min-height: 85vh; /* ocupa buena pantalla */
+        padding: 120px 20px 80px;
+
+        /* mejor ajuste de imagen */
+        background-size: cover;
+        background-position: center center;
+    }
+
+    /* TEXTO */
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* NAV MEJOR POSICIONADO */
+    .nav {
+        top: 15px;
+        padding: 0 15px;
+    }
+
+    /* BOTÓN VOLVER */
+    .btn-volver {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* HAMBURGUESA */
+    .hamburger {
+        font-size: 26px;
+    }
+}
+
+/* ================= CELULARES PEQUEÑOS ================= */
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 90vh;
+        padding: 110px 15px 70px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* ===================================================== */
+/* 🔥 CORRECCION FINAL HISTORIA (SIN ROMPER TU CODIGO) */
+/* ===================================================== */
+
+/* QUITAR CARD BLANCO DEFINITIVAMENTE */
+.historia-texto{
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* HACER QUE USE EL MISMO LAYOUT QUE TUS OTRAS PAGINAS */
+.historia-contenedor{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:60px !important;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* TEXTO IGUAL */
+.historia-texto{
+    flex:1;
+    font-size:17px !important;
+    line-height:1.8 !important;
+    color:#2c2c2c !important;
+    text-align:left !important;
+}
+
+/* IMAGEN IGUAL */
+.historia-imagen{
+    flex:1;
+    text-align:right !important;
+}
+
+.historia-imagen img{
+    max-width:450px !important;
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* TITULO IGUAL */
+.titulo-historia{
+    color:#0a3d62 !important;
+    font-weight:600 !important;
+    margin-bottom:60px !important;
+}
+
+/* ===================================================== */
+/* 📱 RESPONSIVE IGUAL QUE TUS OTRAS PAGINAS */
+/* ===================================================== */
+
+@media(max-width:900px){
+
+    .historia-contenedor{
+        flex-direction:column !important;
+        text-align:center;
+    }
+
+    .historia-imagen{
+        text-align:center !important;
+    }
+
+    .historia-imagen img{
+        max-width:90% !important;
+    }
+
+    .historia-texto{
+        text-align:center !important;
+    }
+}
+/* ================================================= */
+/* BOTONES PREMIUM */
+/* ================================================= */
+
+.btn-volver,
+.arrow{
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* brillo animado */
+.btn-volver::before,
+.arrow::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+    );
+
+    transition: .6s;
+}
+
+.btn-volver:hover::before,
+.arrow:hover::before{
+    left: 100%;
+}
+/* ================================================= */
+/* LOADER */
+/* ================================================= */
+
+#loader{
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #071a2d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+
+    transition: opacity .5s ease;
+}
+
+.spinner{
+    width: 70px;
+    height: 70px;
+
+    border: 6px solid rgba(255,255,255,.2);
+
+    border-top: 6px solid white;
+
+    border-radius: 50%;
+
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================= */
+/* HERO CON BOTONES ENCIMA DE LA IMAGEN */
+/* ========================================= */
+
+/* QUITA LA BARRA AZUL */
+.nav{
+    position:absolute;
+    top:25px;
+    left:0;
+    width:100%;
+    background:transparent !important;
+    padding:0 30px;
+    z-index:100;
+}
+
+/* HERO */
+.hero{
+    position:relative;
+
+    height:75vh;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.45)
+    ),
+    url("img/vinn.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    overflow:hidden;
+}
+/* ========================================= */
+/* NAVBAR ESTILO MODERNO COMO LA IMAGEN */
+/* ========================================= */
+
+.hero-nav{
+    position:absolute;
+    top:25px;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    z-index:99999;
+}
+
+/* ========================================= */
+/* BOTON VOLVER */
+/* ========================================= */
+
+.btn-volver{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 22px;
+
+    border-radius:40px;
+
+    border:2px solid rgba(255,255,255,0.9);
+
+    background:transparent;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:600;
+
+    backdrop-filter:blur(3px);
+
+    transition:0.3s ease;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.25);
+}
+
+.btn-volver:hover{
+    background:white;
+    color:#0a3d62;
+
+    transform:translateY(-2px);
+}
+
+/* ========================================= */
+/* BOTON MENU */
+/* ========================================= */
+
+.hamburger{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:52px;
+    height:52px;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:38px;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+    text-shadow:0 4px 10px rgba(0,0,0,0.5);
+
+    z-index:100000;
+}
+
+.hamburger:hover{
+    transform:scale(1.08);
+}
+
+/* ========================================= */
+/* MENU DESPLEGABLE */
+/* ========================================= */
+
+.menu-hamburguesa{
+    position:absolute;
+
+    top:75px;
+    right:35px;
+
+    width:240px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.28);
+
+    display:none;
+
+    flex-direction:column;
+
+    padding:15px;
+
+    z-index:999999;
+
+    animation:aparecer .3s ease;
+}
+
+/* MENU ACTIVO */
+
+.menu-hamburguesa.active{
+    display:flex;
+}
+
+/* LINKS */
+
+.menu-hamburguesa a{
+    text-decoration:none;
+
+    color:#0a3d62;
+
+    font-weight:600;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+.menu-hamburguesa a:hover{
+    background:#f3f3f3;
+}
+
+/* ========================================= */
+/* ANIMACION */
+/* ========================================= */
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(-12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ========================================= */
+/* TABLET */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .hero-nav{
+        padding:0 20px;
+        top:18px;
+    }
+
+    .btn-volver{
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+    .hamburger{
+        width:45px;
+        height:45px;
+        font-size:34px;
+    }
+
+    .menu-hamburguesa{
+        right:20px;
+        width:220px;
+    }
+}
+
+/* ========================================= */
+/* CELULAR */
+/* ========================================= */
+
+@media(max-width:480px){
+
+    .hero-nav{
+        padding:0 14px;
+        top:14px;
+    }
+
+    .btn-volver{
+        padding:8px 15px;
+        font-size:13px;
+    }
+
+    .hamburger{
+        width:40px;
+        height:40px;
+        font-size:30px;
+    }
+
+    .menu-hamburguesa{
+        width:200px;
+        right:14px;
+        top:65px;
+    }
+}
+/* ================================================= */
+/* RESPONSIVE GLOBAL FINAL */
+/* ================================================= */
+
+/* EVITA DESBORDAMIENTOS */
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+/* IMAGENES RESPONSIVE */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* ================================================= */
+/* LAPTOPS */
+/* ================================================= */
+
+@media(max-width:1200px){
+
+    .section{
+        padding:70px 30px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:1.1rem;
+    }
+
+    .contenedor-vinos{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .carrusel img{
+        width:340px;
+        height:240px;
+    }
+}
+
+/* ================================================= */
+/* TABLETS */
+/* ================================================= */
+
+@media(max-width:992px){
+
+    /* HERO */
+
+    .hero{
+        height:auto;
+        min-height:80vh;
+        padding:140px 20px 90px;
+        background-position:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+        text-align:center;
+    }
+
+    .hero p{
+        font-size:1rem;
+        text-align:center;
+        padding:0 10px;
+    }
+
+    /* LOGOS */
+
+    .logos-bar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:15px;
+    }
+
+    .logo img{
+        height:75px;
+    }
+
+    /* HISTORIA */
+
+    .historia-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .historia-texto{
+        text-align:center;
+    }
+
+    /* VINOS */
+
+    .contenedor-vinos{
+        grid-template-columns:1fr 1fr;
+        gap:25px;
+    }
+
+    /* GALERIA */
+
+    .carrusel img{
+        width:300px;
+        height:220px;
+    }
+
+    /* MAPA */
+
+    .contenido-mapa h2{
+        font-size:2rem;
+    }
+
+    .contenido-mapa p{
+        font-size:1rem;
+    }
+}
+
+/* ================================================= */
+/* CELULARES */
+/* ================================================= */
+
+@media(max-width:768px){
+
+    /* HEADER */
+
+    .header{
+        padding:15px;
+    }
+
+    .logos-bar{
+        gap:10px;
+    }
+
+    .logo img{
+        height:60px;
+    }
+
+    /* HERO */
+
+    .hero{
+        min-height:90vh;
+        padding:130px 20px 70px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:0.95rem;
+        line-height:1.5;
+    }
+
+    /* NAVBAR */
+
+    .hero-nav{
+        padding:0 15px;
+        top:15px;
+    }
+
+    .btn-volver{
+        padding:8px 15px;
+        font-size:13px;
+    }
+
+    .hamburger{
+        width:42px;
+        height:42px;
+        font-size:30px;
+    }
+
+    .menu-hamburguesa{
+        width:210px;
+        right:15px;
+        top:65px;
+    }
+
+    /* SECCIONES */
+
+    .section{
+        padding:60px 18px;
+    }
+
+    .section h2{
+        font-size:1.8rem;
+    }
+
+    /* HISTORIA */
+
+    .historia-container{
+        gap:30px;
+    }
+
+    .historia-texto{
+        font-size:0.95rem;
+    }
+
+    /* VINOS */
+
+    .titulo-vinos{
+        font-size:2rem;
+    }
+
+    .contenedor-vinos{
+        grid-template-columns:1fr;
+    }
+
+    .vino-card{
+        padding:20px;
+    }
+
+    .vino-imagen img{
+        height:200px;
+    }
+
+    /* MAPA */
+
+    .contenido-mapa h2{
+        font-size:1.8rem;
+    }
+
+    .mapa-container{
+        padding:10px;
+    }
+
+    iframe{
+        height:320px;
+    }
+
+    /* GALERIA */
+
+    .titulo-galeria{
+        font-size:2rem;
+    }
+
+    .carrusel-track{
+        gap:15px;
+    }
+
+    .carrusel img{
+        width:260px;
+        height:180px;
+    }
+
+    /* REDES */
+
+    .redes-flotantes{
+        bottom:20px;
+        right:15px;
+    }
+
+    .redes-flotantes a{
+        width:52px;
+        height:52px;
+        font-size:22px;
+    }
+}
+
+/* ================================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================================= */
+
+@media(max-width:480px){
+
+    /* HERO */
+
+    .hero{
+        padding:120px 15px 60px;
+    }
+
+    .hero h1{
+        font-size:1.7rem;
+    }
+
+    .hero p{
+        font-size:0.9rem;
+    }
+
+    /* LOGOS */
+
+    .logo img{
+        height:50px;
+    }
+
+    /* NAV */
+
+    .btn-volver{
+        font-size:12px;
+        padding:7px 13px;
+    }
+
+    .hamburger{
+        width:38px;
+        height:38px;
+        font-size:26px;
+    }
+
+    .menu-hamburguesa{
+        width:190px;
+    }
+
+    /* TEXTOS */
+
+    .section h2{
+        font-size:1.5rem;
+    }
+
+    .titulo-vinos,
+    .titulo-galeria{
+        font-size:1.7rem;
+    }
+
+    /* GALERIA */
+
+    .carrusel img{
+        width:220px;
+        height:150px;
+    }
+
+    /* BOTONES */
+
+    .btn-info,
+    .btn-mapa{
+        width:100%;
+        text-align:center;
+    }
+
+    /* REDES */
+
+    .redes-flotantes a{
+        width:48px;
+        height:48px;
+        font-size:20px;
+    }
+}
+/* foto en la parte de abajo de los logos */
+.hero{
+height:65vh;
+width:100%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,.88) 0%,
+rgba(0,0,0,.60) 30%,
+rgba(0,0,0,.35) 100%
+),
+url("img/bodega2.png");
+
+background-size:cover;   /* quita el 130% */
+background-position:center center;
+background-repeat:no-repeat;
+}
+/* ========================================= */
+/* FONDO GENERAL ELEGANTE PARA TODA LA PAGINA */
+/* ========================================= */
+
+body{
+    background:#ffffff;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* ========================================= */
+/* SECCIONES */
+/* ========================================= */
+
+.section,
+.historia,
+.vinos,
+.galeria,
+.seccion-mapa{
+    background:#ffffff;
+}
+
+/* ========================================= */
+/* FONDO SUAVE ENTRE SECCIONES */
+/* ========================================= */
+
+.vinos{
+    background:#fafafa;
+}
+
+.galeria{
+    background:#f7f9fc;
+}
+
+.seccion-mapa{
+    background:#ffffff;
+}
+
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+
+.footer{
+    background:#0a3d62;
+    color:white;
+}
+
+/* ========================================= */
+/* TARJETAS */
+/* ========================================= */
+
+.vino-card{
+    background:#ffffff;
+    border:1px solid rgba(0,0,0,.05);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+}
+
+.vino-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.15);
+}
+
+/* ========================================= */
+/* CONTENEDORES */
+/* ========================================= */
+
+.mapa-container{
+    background:#ffffff;
+}
+
+/* ========================================= */
+/* TITULOS */
+/* ========================================= */
+
+.section h2,
+.titulo-historia,
+.titulo-vinos,
+.titulo-galeria{
+    color:#0a3d62;
+}
+
+/* ========================================= */
+/* TEXTOS */
+/* ========================================= */
+
+p{
+    color:#444;
+    line-height:1.8;
+}
+
+/* ========================================= */
+/* IMAGENES */
+/* ========================================= */
+
+.historia-imagen img,
+.carrusel img{
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    body{
+        background:#ffffff;
+    }
+
+    .section{
+        padding:60px 18px;
+    }
+
+    .vinos{
+        background:#fafafa;
+    }
+
+    .galeria{
+        background:#f7f9fc;
+    }
+}
+/* ================================================= */
+/* HISTORIA PREMIUM */
+/* ================================================= */
+
+.texto-decorado{
+    position:relative;
+    padding-left:25px;
+}
+
+.linea-vino{
+    position:absolute;
+    left:0;
+    top:5px;
+
+    width:6px;
+    height:100%;
+
+    background:linear-gradient(
+        to bottom,
+        #071a2d,
+        #0a3d62
+    );
+
+    border-radius:20px;
+}
+
+.historia-texto p{
+    margin-bottom:22px;
+
+    font-size:17px;
+    line-height:2;
+
+    color:#444;
+}
+
+.historia-texto strong{
+    color:#071a2d;
+    font-weight:700;
+}
+
+/* ================================================= */
+/* EFECTO PREMIUM A LAS SECCIONES */
+/* ================================================= */
+
+.historia,
+.galeria,
+.seccion-mapa{
+    position:relative;
+}
+
+.historia::before,
+.galeria::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:80%;
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(10,61,98,.25),
+        transparent
+    );
+}
+
+/* ================================================= */
+/* TITULOS MAS ELEGANTES */
+/* ================================================= */
+
+.titulo-historia,
+.titulo-galeria{
+    position:relative;
+
+    letter-spacing:1px;
+
+    text-align:center;
+}
+
+.titulo-historia::after,
+.titulo-galeria::after{
+    content:"";
+
+    width:90px;
+    height:4px;
+
+    background:#071a2d;
+
+    display:block;
+
+    margin:15px auto 0;
+
+    border-radius:10px;
+}
+
+/* ================================================= */
+/* FONDO MÁS VIVO */
+/* ================================================= */
+
+body{
+    background:
+    linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        #ffffff 20%,
+        #f8fafc 100%
+    );
+
+    overflow-x:hidden;
+}
+
+/* ================================================= */
+/* HISTORIA CONTENEDOR */
+/* ================================================= */
+
+.historia-contenedor{
+    background:white;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+
+    max-width:1200px;
+    margin:auto;
+}
+
+.historia-texto{
+    flex:1;
+}
+
+.historia-imagen{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+}
+
+.historia-imagen img{
+    width:100%;
+    max-width:500px;
+
+    border-radius:20px;
+
+    object-fit:cover;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+}
+
+/* ================================================= */
+/* HERO MÁS IMPACTANTE */
+/* ================================================= */
+
+.hero-content{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    line-height:1.2;
+
+    text-shadow:
+    0 8px 20px rgba(0,0,0,.45);
+}
+
+.hero p{
+    margin-top:15px;
+
+    line-height:1.8;
+
+    font-size:1.2rem;
+
+    text-shadow:
+    0 4px 10px rgba(0,0,0,.35);
+}
+
+/* ================================================= */
+/* BOTON MAPA MÁS BONITO */
+/* ================================================= */
+
+.btn-mapa{
+    display:inline-block;
+
+    background:linear-gradient(
+        135deg,
+        #e65c00,
+        #ff6600
+    );
+
+    border-radius:40px;
+
+    padding:15px 35px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s ease;
+
+    box-shadow:
+    0 10px 25px rgba(7,26,45,.25);
+}
+
+.btn-mapa:hover{
+    transform:translateY(-4px) scale(1.03);
+}
+
+/* ================================================= */
+/* GALERIA MÁS ELEGANTE */
+/* ================================================= */
+
+.carrusel{
+    overflow:hidden;
+}
+
+.carrusel-track{
+    display:flex;
+    gap:25px;
+}
+
+.carrusel img{
+    width:420px;
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:4px solid white;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+
+    transition:.4s ease;
+}
+
+.carrusel img:hover{
+    transform:scale(1.05);
+}
+/* ================================================= */
+/* RESPONSIVE LAPTOP */
+/* ================================================= */
+
+@media(max-width:1200px){
+
+    .hero h1{
+        font-size:3.2rem;
+    }
+
+    .hero p{
+        font-size:1.1rem;
+    }
+
+    .historia-contenedor{
+        gap:40px;
+        padding:40px;
+    }
+
+    .carrusel img{
+        width:340px;
+        height:240px;
+    }
+}
+
+/* ================================================= */
+/* RESPONSIVE TABLET */
+/* ================================================= */
+
+@media(max-width:992px){
+
+    .historia-contenedor{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .historia-texto{
+        width:100%;
+    }
+
+    .historia-texto p{
+        text-align:center;
+    }
+
+    .historia-imagen{
+        width:100%;
+    }
+
+    .historia-imagen img{
+        max-width:650px;
+    }
+
+    .hero{
+        min-height:80vh;
+        padding:120px 20px 80px;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .experiencia-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .carrusel img{
+        width:300px;
+        height:210px;
+    }
+}
+
+/* ================================================= */
+/* RESPONSIVE CELULAR */
+/* ================================================= */
+
+@media(max-width:768px){
+
+    .hero{
+        min-height:90vh;
+        padding:120px 20px 70px;
+        text-align:center;
+    }
+
+    .hero-content{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+        line-height:1.3;
+    }
+
+    .hero p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .historia{
+        padding:60px 18px;
+    }
+
+    .historia-contenedor{
+        padding:30px 22px;
+
+        border-radius:25px;
+
+        gap:30px;
+    }
+
+    .texto-decorado{
+        padding-left:18px;
+    }
+
+    .linea-vino{
+        width:5px;
+    }
+
+    .historia-texto p{
+        font-size:15px;
+        line-height:1.9;
+
+        text-align:justify;
+    }
+
+    .historia-imagen img{
+        width:100%;
+        max-width:100%;
+
+        height:260px;
+
+        object-fit:cover;
+    }
+
+    .titulo-historia,
+    .titulo-galeria,
+    .experiencia h2{
+        font-size:2rem;
+    }
+
+    .experiencia-grid{
+        grid-template-columns:1fr;
+    }
+
+    .exp-card{
+        padding:35px 25px;
+    }
+
+    .exp-card i{
+        font-size:42px;
+    }
+
+    .carrusel-track{
+        gap:15px;
+    }
+
+    .carrusel img{
+        width:260px;
+        height:180px;
+    }
+
+    .btn-mapa{
+        width:100%;
+        text-align:center;
+    }
+}
+
+/* ================================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================================= */
+
+@media(max-width:480px){
+
+    .hero{
+        padding:110px 15px 60px;
+    }
+
+    .hero h1{
+        font-size:1.8rem;
+    }
+
+    .hero p{
+        font-size:.95rem;
+    }
+
+    .historia-contenedor{
+        padding:25px 18px;
+    }
+
+    .historia-texto p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .titulo-historia,
+    .titulo-galeria,
+    .experiencia h2{
+        font-size:1.7rem;
+    }
+
+    .historia-imagen img{
+        height:220px;
+    }
+
+    .exp-card{
+        border-radius:20px;
+    }
+
+    .carrusel img{
+        width:220px;
+        height:150px;
+    }
+
+    .btn-mapa{
+        padding:14px 20px;
+        font-size:14px;
+    }
+}
+/* ================================================= */
+/* CARDS PEQUEÑOS PREMIUM CON IMAGEN */
+/* ================================================= */
+
+.exp-card{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:30px 25px;
+
+    border-radius:22px;
+
+    color:white;
+
+    min-height:230px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+    transition:.4s ease;
+}
+
+/* HOVER */
+
+.exp-card:hover{
+    transform:translateY(-8px) scale(1.02);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.22);
+}
+
+/* ================================================= */
+/* CARD 1 */
+/* ================================================= */
+
+.card1{
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,.88) 0%,
+    rgba(0,0,0,.60) 30%,
+    rgba(0,0,0,.35) 100%
+    ),
+    url("img/bodega1.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ================================================= */
+/* CARD 2 */
+/* ================================================= */
+
+.card2{
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,.88) 0%,
+    rgba(0,0,0,.60) 30%,
+    rgba(0,0,0,.35) 100%
+    ),
+    url("img/bodega2.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ================================================= */
+/* CARD 3 */
+/* ================================================= */
+
+.card3{
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,.88) 0%,
+    rgba(0,0,0,.60) 30%,
+    rgba(0,0,0,.35) 100%
+    ),
+    url("img/bodega3.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* ================================================= */
+/* ICONOS */
+/* ================================================= */
+
+.exp-card i{
+    font-size:38px;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+/* ================================================= */
+/* TITULOS */
+/* ================================================= */
+
+.exp-card h3{
+    color:white;
+
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+/* ================================================= */
+/* TEXTO */
+/* ================================================= */
+
+.exp-card p{
+    color:rgba(255,255,255,.92);
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+/* ================================================= */
+/* GRID */
+/* ================================================= */
+
+.experiencia-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    max-width:1100px;
+
+    margin:auto;
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media(max-width:900px){
+
+    .experiencia-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media(max-width:768px){
+
+    .experiencia-grid{
+        grid-template-columns:1fr;
+    }
+
+    .exp-card{
+        min-height:210px;
+
+        padding:28px 22px;
+    }
+
+    .exp-card h3{
+        font-size:19px;
+    }
+
+    .exp-card p{
+        font-size:14px;
+    }
+}
+
+/* ================================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================================= */
+
+@media(max-width:480px){
+
+    .exp-card{
+        min-height:190px;
+
+        border-radius:18px;
+    }
+
+    .exp-card i{
+        font-size:34px;
+    }
+
+    .exp-card h3{
+        font-size:18px;
+    }
+
+    .exp-card p{
+        font-size:13px;
+    }
+}
+/* ================================================= */
+/* TITULO EXPERIENCIA */
+/* ================================================= */
+
+.experiencia h2{
+    text-align:center;
+
+    font-size:48px;
+
+    color:#0a3d62;
+
+    font-weight:700;
+
+    margin-bottom:60px;
+
+    letter-spacing:1px;
+}
+
+/* LINEA DECORATIVA */
+
+.experiencia h2::after{
+    content:"";
+
+    display:block;
+
+    width:90px;
+    height:4px;
+
+    background:#0a3d62;
+
+    margin:15px auto 0;
+
+    border-radius:10px;
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media(max-width:768px){
+
+    .experiencia h2{
+        font-size:38px;
+    }
+}
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media(max-width:480px){
+
+    .experiencia h2{
+        font-size:30px;
+    }
+}
+/* ================================================= */
+/* RESPONSIVE CELULAR */
+/* QUE LOS CARDS SE VEAN COMO EN LAPTOP */
+/* ================================================= */
+
+@media(max-width:768px){
+
+    .experiencia{
+        padding:70px 18px;
+    }
+
+    .experiencia-grid{
+        display:flex;
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    .exp-card{
+
+        /* mismo estilo visual */
+        min-height:220px;
+
+        width:100%;
+
+        border-radius:22px;
+
+        padding:30px 25px;
+
+        background-size:cover;
+        background-position:center;
+
+        justify-content:flex-end;
+
+        box-shadow:
+        0 15px 35px rgba(0,0,0,.18);
+    }
+
+    /* icono */
+
+    .exp-card i{
+        font-size:36px;
+
+        margin-bottom:12px;
+    }
+
+    /* titulo */
+
+    .exp-card h3{
+        font-size:24px;
+
+        margin-bottom:10px;
+
+        line-height:1.3;
+    }
+
+    /* texto */
+
+    .exp-card p{
+        font-size:15px;
+
+        line-height:1.8;
+    }
+}
+
+/* ================================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================================= */
+
+@media(max-width:480px){
+
+    .exp-card{
+        min-height:200px;
+
+        padding:25px 20px;
+    }
+
+    .exp-card i{
+        font-size:32px;
+    }
+
+    .exp-card h3{
+        font-size:21px;
+    }
+
+    .exp-card p{
+        font-size:14px;
+    }
+}
+
+/* ================================================= */
+/* NAV DENTRO DEL HERO */
+/* ================================================= */
+
+/* HERO COMO CONTENEDOR */
+.hero{
+    position: relative;
+}
+
+/* OCULTA LA BARRA BLANCA/ESPACIO */
+.header{
+    position: relative;
+    z-index: 1;
+}
+
+/* NAV ENCIMA DE LA FOTO */
+.hero-nav,
+.nav{
+    position: absolute !important;
+
+    top: 25px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 35px;
+
+    background: transparent !important;
+
+    z-index: 9999;
+}
+
+/* BOTON VOLVER */
+.btn-volver{
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    color: white !important;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+/* HAMBURGUESA */
+.hamburger{
+    color: white !important;
+
+    text-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+
+/* MENU */
+.menu-hamburguesa{
+    top: 70px;
+    right: 35px;
+}
+
+/* ================================================= */
+/* RESPONSIVE LAPTOP */
+/* ================================================= */
+
+@media(max-width:1200px){
+
+    .hero-nav,
+    .nav{
+        top: 20px;
+        padding: 0 25px;
+    }
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media(max-width:768px){
+
+    .hero-nav,
+    .nav{
+        top: 15px;
+        padding: 0 18px;
+    }
+
+    .btn-volver{
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .hamburger{
+        font-size: 30px;
+    }
+
+    .menu-hamburguesa{
+        right: 18px;
+        top: 60px;
+    }
+}
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media(max-width:480px){
+
+    .hero-nav,
+    .nav{
+        top: 12px;
+        padding: 0 14px;
+    }
+
+    .btn-volver{
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .hamburger{
+        font-size: 26px;
+    }
+
+    .menu-hamburguesa{
+        width: 190px;
+        top: 55px;
+        right: 14px;
+    }
+}
+/* ========================================= */
+/* HISTORIA MÁS ELEGANTE */
+/* ========================================= */
+
+/* CONTENEDOR */
+.historia-contenedor{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+    gap:50px;
+}
+
+/* QUITA LA LINEA AZUL */
+.linea-vino{
+    display:none !important;
+}
+
+/* QUITA EL ESPACIO DE LA LINEA */
+.texto-decorado{
+    padding-left:0 !important;
+}
+
+/* TITULO */
+.titulo-historia{
+
+    font-size:48px;
+
+    color:#0a3d62;
+
+    margin-bottom:40px;
+
+    text-align:center;
+
+    font-weight:700;
+}
+
+/* TEXTO */
+.historia-texto p{
+
+    font-size:17px;
+
+    line-height:2;
+
+    color:#444;
+
+    margin-bottom:22px;
+
+    text-align:justify;
+}
+
+/* NOMBRE */
+.historia-texto strong{
+
+    color:#0a3d62;
+
+    font-size:20px;
+}
+
+/* IMAGEN */
+.historia-imagen img{
+
+    border-radius:22px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+    transition:.4s ease;
+}
+
+/* EFECTO */
+.historia-imagen img:hover{
+
+    transform:scale(1.03);
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .historia-contenedor{
+
+        padding:28px 22px;
+
+        border-radius:22px;
+    }
+
+    .titulo-historia{
+        font-size:34px;
+    }
+
+    .historia-texto p{
+
+        font-size:15px;
+
+        line-height:1.9;
+    }
+}
+
+@media(max-width:480px){
+
+    .titulo-historia{
+        font-size:28px;
+    }
+
+    .historia-texto p{
+        font-size:14px;
+    }
+
+    .historia-contenedor{
+        padding:22px 18px;
+    }
+}
+/* CENTRAR TEXTO VINICOLA SANTA ELENA */
+
+.historia-texto strong{
+    display:block;
+    text-align:center;
+    margin-top:25px;
+}

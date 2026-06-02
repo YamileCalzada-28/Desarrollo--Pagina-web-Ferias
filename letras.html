@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinícola Hacienda de Letras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="letras.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+<header class="header">
+
+    <!-- BARRA BLANCA DE LOGOS -->
+    <div class="logos-bar">
+        <div class="logo left">
+            <img src="img/Logo_Ayundamiento.png" alt="Ayuntamiento de Pabellón">
+        </div>
+
+        <div class="logo center">
+            <img src="img/logo_fiestasteatro.png" alt="Teatro del Pueblo">
+        </div>
+
+        <div class="logo right">
+            <img src="img/logo_ferias.png" alt="Feria Regional">
+        </div>
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+<nav class="hero-nav">
+
+    <a href="Tierrasdevino.html" class="btn-volver">
+        ← Volver
+    </a>
+
+    <button class="hamburger" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <div class="menu-hamburguesa" id="menu">
+
+        <a href="#historia">Nuestra Historia</a>
+
+        <a href="#vinos">Nuestros Vinos</a>
+
+        <a href="#mapa">Ubicación</a>
+
+        <a href="#galeria">Galería</a>
+
+    </div>
+
+</nav>
+ <div class="hero-content">
+    <h1>Vinícola Hacienda de Letras</h1>
+    <p>Tradición, pasión y calidad en cada botella. Descubre nuestra historia y nuestros vinos únicos.</p>
+</section><!-- ================= NUESTRA HISTORIA ================= -->
+
+<section class="historia section" id="historia">
+
+    <h2 class="titulo-historia">Nuestra Historia</h2>
+
+    <div class="historia-contenedor">
+
+        <!-- TEXTO -->
+        <div class="historia-texto">
+
+            <p>
+                Hacienda de Letras construida desde 1854, con una tradición de más de 40 años como vinicultores.
+
+                En la región, Hacienda de Letras es uno de los principales destinos del enoturismo gracias a sus recorridos por 
+                los viñedos y sus diversas variedades de vino. Su tradición e historia permite que los visitantes vivan experiencias
+                a través de diferentes actividades.
+
+                <br><br>
+
+                La cava es uno de los lugares fascinantes para conocer y vivir una experiencia enriquecedora en torno al vino,
+                las catas y el buen maridaje.
+
+                La producción actualmente es alrededor de 500 toneladas de uva por año con más de 18 variedades en 
+                aproximadamente 120 hectáreas plantadas.
+
+                <br><br>
+
+                Descubre y degusta la esencia de Aguascalientes en cada copa.
+            </p>
+
+            <!-- NOMBRE -->
+            <strong>Hacienda de Letras</strong>
+
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="historia-imagen">
+
+            <img src="img/letras2.PNG" alt="Hacienda de Letras">
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CÓMO LLEGAR ================= -->
+<section id="mapa" class="seccion-mapa">
+
+<div class="contenido-mapa">
+
+<h2>Cómo llegar a Vinícola Hacienda de Letras</h2>
+
+<p>
+Visítanos y descubre nuestros vinos artesanales en un ambiente natural.
+Te esperamos para que vivas una experiencia única entre viñedos.
+</p>
+
+<div class="mapa-container">
+
+<iframe
+src="https://www.google.com/maps?q=Hacienda+de+Letras+Aguascalientes&output=embed"
+width="100%"
+height="420"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+<a 
+href="https://www.google.com/maps/search/?api=1&query=Hacienda+de+Letras+Aguascalientes"
+target="_blank"
+class="btn-mapa">
+Ver en Google Maps
+</a>
+
+</div>
+
+</section>
+
+</section>
+<!-- ================= NUESTROS VINOS ================= -->
+<section id="vinos" class="section vinos">
+
+<h2 class="titulo-vinos">Conoce nuestros vinos de calidad</h2>
+
+<div class="contenedor-vinos">
+
+<!-- VINO 1 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos1.jpeg" alt="Cabernet Sauvignon">
+</div>
+
+<h3>Aramis</h3>
+
+<input type="checkbox" id="vino1">
+<label for="vino1" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong> Riesling - Chardonnay Tipo: Vino de Mesa Seco Blanco.</p>
+<p><strong>Grado de alcohol :</strong>  10.5%.</p>
+<p><strong>Vol.Region:</strong> Aguascalientes.</p>
+<p><strong>Descripción:</strong></p>
+<p><strong>Vista:</strong> Fina tonalidad ámbar brillante.</p>
+<p><strong>Olfato:</strong> Intensidad media</p>
+<p><strong>Gusto:</strong> Esencia frutal cítrica con envolvente sensación astringente en boca y notas de lima.
+ligero en boca y con un agradable retrogusto , fresco y equilibrado y sin taninos persistentes.Recomendaciom de maridaje:excelentes
+en acompañamiento con pescado o marisco de sabores estructurados, pastas a base de mantequilla o ensaladas con trozos de queso fresco.</p>
+</div>
+</div>
+
+<!-- VINO 2 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos2.jpeg" alt="Chardonnay">
+</div>
+
+<h3>Athos</h3>
+
+<input type="checkbox" id="vino2">
+<label for="vino2" class="btn-info">Ver información</label>
+<div class="vino-info">
+<p><strong>Variedad:</strong> Sangiovese - Nebbiolo Tipo: Vino de Mesa Semi Tinto.</p>
+<p><strong>Grado de alcohol :</strong>  12.5%.</p>
+<p><strong>Vol.Region:</strong> Aguascalientes.</p>
+<p><strong>Descripción:</strong></p>
+<p><strong>Vista:</strong> Color purpura intenso, cuerpo redondo y equilibrado a la vista.</p>
+<p><strong>Olfato:</strong>Intensidad aromática media y carácter olfativo a frutas negras como grosella negra y ciruela pasa.</p>
+<p><strong>Gusto:</strong> Finos matices característicos del Nebbiolo , la frescura y sabores en armonia por el dulzor del Sangiovese.
+Recomendación de maridaje : Disfrútalo con brochetas de carne y pimiento morón,pastas con salsas sazonadas o enchiladas.</p>
+</div>
+</div>
+
+<!-- VINO 3 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vino14.png" alt="Rosé">
+</div>
+
+<h3>D´Artagnan </h3>
+
+<input type="checkbox" id="vino3">
+<label for="vino3" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong> Reserva Tempranillo - Merlot</p>
+<p><strong>Tipo:</strong> Vino de Mesa Seco Tinto.</p>
+<p><strong>Grado de alcohol:</strong> 12.5%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Profundos violáceos a la vista. Sedoso cuerpo aportado por su fina elaboración.Intenso grosella
+roja de capa alta, limpia y de cuerpo medio.</p>
+<p><strong>Olfato:</strong>Alta intensidad y carácter afrutado , predominan los frutos rojos , como zarzamora y ciruela.</p>
+<p><strong>Gusto:</strong>Predominan las notas de carácter fuerte , con un retrogusto de canela y tabaco y equilibrado.</p>
+<p><strong>Recomendación de maridaje:</strong>Ideal para acompañar con alimentos de carne roja preparados a la parrilla o en salsa,ternera y queso fuertes.</p>
+</div>
+</div>
+
+<!-- VINO 4 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos3.jpeg" alt="Merlot">
+</div>
+
+<h3>Dulce Apapacho</h3>
+
+<input type="checkbox" id="vino4">
+<label for="vino4" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Muscat - Chardonnay.</p>
+<p><strong>Tipo:</strong>Vino de Mesa Dulce Azul.</p>
+<p><strong>Grado de alcohol:</strong> 10.5%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Color Azul indigo brillante con reflejos y cuerpo medio.</p>
+<p><strong>Olfato:</strong>Intensidad aromática media , aroma frutales, durazno, pera y manzana.</p>
+<p><strong>Gusto:</strong>Delicados sabores de frutos del bosque como mora azul , zarzamora o melocotón. Sabor suave
+frutal con un recuerdo muy intresante en el retrogusto.</p>
+<p><strong>Recomendación de maridaje:</strong>Excelentes con Postres elaboradosa base de frutas como manzana , pera , durazno y limón. Buen Digestivo.</p>
+</div>
+</div>
+
+<!-- VINO 5 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos4.jpeg" alt="Merlot">
+</div>
+
+<h3>El greco</h3>
+
+<input type="checkbox" id="vino5">
+<label for="vino5" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Gran Reserva Malbec.</p>
+<p><strong>Tipo:</strong>Vino de Mesa seco Tinto.</p>
+<p><strong>Grado de alcohol:</strong> 12.5%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Atractivo color purpura con limpio ribete violáceos.</p>
+<p><strong>Olfato:</strong>Cuerpo apiñado que se percibe fácilmente con cuerpo medio.</p>
+<p><strong>Gusto:</strong>Predomina un carácter maduro de intensidad media que evolucionan a frutos como la ciruela negra y berries.
+Suave en boca, con un agradable sabor fresco y equilibrado.</p>
+<p><strong>Recomendación de maridaje:</strong>Excelente compañia de carnes magras, vegetales a la plancha y quesos espaciados y curados.</p>
+</div>
+</div>
+
+<!-- VINO 6 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos5.jpeg" alt="Merlot">
+</div>
+
+<h3>Muscat</h3>
+
+<input type="checkbox" id="vino6">
+<label for="vino6" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Muscat Blanc.</p>
+<p><strong>Tipo:</strong>Vino de Mesa Dulce Blanco.</p>
+<p><strong>Grado de alcohol:</strong> 10.5%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Color Amarillo pajizo con ligeras tonalidades verdosas, limpio,brillante , y cuerpo medio.</p>
+<p><strong>Olfato:</strong>Olfato dulce y fresco con armónicas notas de manzana verde y pera.</p>
+<p><strong>Gusto:</strong>Dulce, afrutado con notas de manzana verde,pera y membrillo en boca.</p>
+<p><strong>Recomendación de maridaje:</strong>Buen acompañamiento con pollo ligeramente condimentado, cremas,ensaladas o Postres
+de queso con frutas y helado.Excelente como Digestivo.</p>
+</div>
+</div>
+
+<!-- VINO 7 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos6.jpeg" alt="Merlot">
+</div>
+
+<h3>Karol</h3>
+
+<input type="checkbox" id="vino7">
+<label for="vino7" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>karol.</p>
+<p><strong>Tipo:</strong>Vino Tinto Para Consagrar.</p>
+<p><strong>Grado de alcohol:</strong> 12%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Gran profundidas con tonos caoba y ribete granate.</p>
+<p><strong>Olfato:</strong>Refleja alta intensidad desde su aroma a frutos maduros negros y rojos.</p>
+<p><strong>Gusto:</strong>Ligero en boca y con un agradable retrogusto,fresco y Vino generoso de carácter intenso con 
+marcadas notas a frutos rojos compotados que permanecen en boca.</p>
+</div>
+</div>
+
+<!-- VINO 8 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos7.jpeg" alt="Merlot">
+</div>
+
+<h3>Phortos</h3>
+
+<input type="checkbox" id="vino8">
+<label for="vino8" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Malbec - Salvador.</p>
+<p><strong>Tipo:</strong>Vino de Mesa Dulce Tinto.</p>
+<p><strong>Grado de alcohol:</strong> 17.7%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Color oscuro y profundo con tonos granate y cuerpo firme con textura sedosa.</p>
+<p><strong>Olfato:</strong>Elegante e intensos aromas adquiridos durante su elaboración.</p>
+<p><strong>Gusto:</strong>Vigroso dulzor con permanencia cálidad en paladar.</p>
+<p><strong>Recomendación de maridaje:</strong>Excelente vino digestivo para acompañarse con tartas de frutas y postres selectivos</p>
+</div>
+</div>
+
+<!-- VINO 9  Continuar ese -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos8.jpeg" alt="Merlot">
+</div>
+
+<h3>Popayán</h3>
+
+<input type="checkbox" id="vino9">
+<label for="vino9" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Aletico - Pinot.</p>
+<p><strong>Tipo:</strong>Vino de Mesa Semi Dulce Rosado.</p>
+<p><strong>Grado de alcohol:</strong> 10.5%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Vino de color brillante salmón,con cuerpo medio.</p>
+<p><strong>Olfato:</strong>Predomina la intensidad aromática afrutada y tropical . carácter olfativo fresco.</p>
+<p><strong>Gusto:</strong>Suave en boca, con exóticos toques de fruta del dragon,mango y durazno.Agradable sabor fresco y equilibrado.</p>
+<p><strong>Recomendación de maridaje:</strong>Disfrútalo acompañado de ensaladas, ceviche, sushi, salmon, tarta de frutas y quesos suaves</p>
+</div>
+</div>
+
+<!-- VINO 10 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos9.jpeg" alt="Merlot">
+</div>
+
+<h3>Precioso Regalo</h3>
+
+<input type="checkbox" id="vino10">
+<label for="vino10" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Ruby Cabernet-Syrah.</p>
+<p><strong>Tipo:</strong>Vino de Mesa Dulce Tinto.</p>
+<p><strong>Grado de alcohol:</strong> 11%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Intenso color escarlata con destellos brillantes, rojo intenso con tonos limpios, de cuerpo medio.</p>
+<p><strong>Olfato:</strong>Aromas florales y olfativo dulce y afrutado.</p>
+<p><strong>Gusto:</strong>Gusto jovial de frutos rojos como cereza, grosella y arándanos.</p>
+<p><strong>Recomendación de maridaje:</strong>Disfrutalo en cualquier ocasión, recomendado para postres con chocolate amargo o dulce y con frutos rojos.</p>
+</div>
+</div>
+
+<!-- VINO 11 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos10.jpeg" alt="Merlot">
+</div>
+
+<h3>Ruby Amor Eterno</h3>
+
+<input type="checkbox" id="vino11">
+<label for="vino11" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Ruby Cabernet.</p>
+<p><strong>Tipo:</strong>Vino de Mesa Semi Dulce Tinto.</p>
+<p><strong>Grado de alcohol:</strong> 12.5%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>Elegante color rojo, granante muy intenso con tonos rubí de capa alta, limpio y de cuerpo medio.</p>
+<p><strong>Olfato:</strong>Intenso olor afrutado con toque de ciruela.</p>
+<p><strong>Gusto:</strong>Gusto dulce que evoca a frutos rojos y provoca una experiencia excepcional en la boca.</p>
+<p><strong>Recomendación de maridaje:</strong>Ideal para acompañarse con platillos típicos de gastronomía mexicana; ademas de postres de chocolate, frutos del bosque y nueces.</p>
+</div>
+</div>
+
+<!-- VINO 12 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinos11.jpeg" alt="Merlot">
+</div>
+
+<h3>Tres Mosqueteros</h3>
+
+<input type="checkbox" id="vino12">
+<label for="vino12" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Variedad:</strong>Reserva Malbec - Syrah - Merlot.</p>
+<p><strong>Tipo:</strong>Vino de Mesa Seco Tinto.</p>
+<p><strong>Grado de alcohol:</strong> 12.5%.</p>
+<p><strong>Vol.Región:</strong> Aguascalientes.</p>
+<p><strong>Descripción</strong></p>
+<p><strong>Vista:</strong>tonalidades caoba, con cuerpo untoso adquirido durante su proceso de crianza.</p>
+<p><strong>Olfato:</strong>Completa composición de frutos rojos maduros, finas maderas europeas, regazo y cacao.</p>
+<p><strong>Gusto:</strong>carácter fuerte, cuerpo seco y alto. Cuenta con estructurada tanicidad característica del ensamble, Frutos rojos maduros y finas maderas.</p>
+<p><strong>Recomendación de maridaje:</strong>Buen acompañamiento para cortes finos de carnes rojas, platillos espaciados, quesos madurados y carnes frías curadas.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+<!-- ================= GALERÍA ================= -->
+<section class="galeria">
+
+<h2 class="titulo-galeria">Galería de la Vinícola</h2>
+
+<div class="carrusel">
+
+<div class="carrusel-track">
+
+<img src="img/haciendaletrs." alt="Viñedos">
+<img src="img/fotos2.jpeg" alt="Producción">
+<img src="img/foto3.jpeg" alt="Barricas">
+<img src="img/foto4.jpeg" alt="Cosecha">
+<img src="img/foto5.jpeg" alt="Botellas">
+<img src="img/foto6.jpeg" alt="Paisaje">
+
+</div>
+
+</div>
+<!-- VISOR DE IMÁGENES -->
+<div id="visor" class="visor">
+    <span class="cerrar">&times;</span>
+    <img class="visor-img" id="img-grande">
+</div>
+
+</section>
+<!-- ================= BOTONES FLOTANTES ================= -->
+<div class="redes-flotantes">
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/TuPagina" target="_blank" class="btn-facebook"><i class="fab fa-facebook-f"></i></a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Bodegas de Origen</p>
+</footer>
+
+<!-- ================= LEAFLET JS ================= -->
+<script>
+    // Mapa centrado en Vinícola El Sarmiento
+    var map = L.map('map').setView([22.176, -102.272], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([22.176, -102.272])
+        .addTo(map)
+        .bindPopup(`<h4>Vinícola El Sarmiento</h4><p>Tradición y calidad en cada botella.</p>`);
+</script>
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const position = sec.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(position < screen - 100){
+sec.classList.add('visible');
+}
+});
+});
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
+});
+</script>
+<script>
+function toggleMenu() {
+
+    const menu = document.getElementById("menu");
+
+    menu.classList.toggle("active");
+}
+
+/* CERRAR MENU AL DAR CLICK FUERA */
+document.addEventListener("click", function(event){
+
+    const menu = document.getElementById("menu");
+
+    const boton = document.querySelector(".hamburger");
+
+    if(
+        !menu.contains(event.target) &&
+        !boton.contains(event.target)
+    ){
+        menu.classList.remove("active");
+    }
+});
+</script>
+</body>
+</html>

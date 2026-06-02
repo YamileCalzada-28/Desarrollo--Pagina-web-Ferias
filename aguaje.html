@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinícola El Aguaje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="aguaje.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+<header class="header">
+
+    <!-- BARRA BLANCA DE LOGOS -->
+    <div class="logos-bar">
+        <div class="logo left">
+            <img src="img/Logo_Ayundamiento.png" alt="Ayuntamiento de Pabellón">
+        </div>
+
+        <div class="logo center">
+            <img src="img/logo_fiestasteatro.png" alt="Teatro del Pueblo">
+        </div>
+
+        <div class="logo right">
+            <img src="img/logo_ferias.png" alt="Feria Regional">
+        </div>
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+<nav class="hero-nav">
+
+    <a href="Tierrasdevino.html" class="btn-volver">
+        ← Volver
+    </a>
+
+    <button class="hamburger" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <div class="menu-hamburguesa" id="menu">
+
+        <a href="#historia">Nuestra Historia</a>
+
+        <a href="#vinos">Nuestros Vinos</a>
+
+        <a href="#mapa">Ubicación</a>
+
+        <a href="#galeria">Galería</a>
+
+    </div>
+
+</nav>
+ <div class="hero-content">
+    <h1>Vinícola El Aguaje</h1>
+    <p>Tradición, pasión y calidad en cada botella.
+    Descubre nuestra historia y nuestros vinos únicos.</p>
+</section>
+<!-- ================= NUESTRA HISTORIA ================= -->
+<section class="historia section" id="historia">
+
+    <h2 class="titulo-historia">Nuestra Historia</h2>
+
+    <div class="historia-contenedor">
+
+        <div class="historia-texto">
+    <p>
+        En Vinícola El Aguaje cada botella cuenta una historia única , desde la tierra donde crece la vida hasta el cuidado
+        artesanal que dedicamos a cada cosecha.
+        <br><br>
+        Sumérgete en nuestra pasión por el vino y déjanos llevar tu paladar a un viaje inolvidable a través de la excelencia enológica.
+        <br><br>
+        Desde su inicio en 2012 , Vinícola El Aguaje se ha dedicado a la creación de vinos excepcionales mediante un proceso de 
+        elaboración meticuloso , donde la armonía y el equilibrio son valores primordiales.
+        <br><br>
+        Esta privilegiada ubicación nos brinda las condiciones climáticas perfectas para el cultivo de la vida permitiendonos 
+        cosechar uvas de la más alta calidad.
+        <br><br>
+        <strong>Vinícola El Aguaje</strong>
+    </p>
+</div>
+
+<div class="historia-imagen">
+<img src="img/aguaje2.jpg" alt="Hacienda de Letras">
+</div>
+</div>
+</section>
+<!-- ================= CÓMO LLEGAR ================= --> 
+<section id="mapa" class="seccion-mapa">
+
+    <div class="contenido-mapa">
+
+        <h2>Cómo llegar a Vinícola El Aguaje</h2>
+
+        <p>
+            Visítanos y descubre nuestros vinos artesanales en un ambiente natural.
+            Te esperamos para que vivas una experiencia única entre viñedos.
+        </p>
+
+        <div class="mapa-container">
+
+            <iframe
+                src="https://maps.google.com/maps?q=Vinicola%20El%20Aguaje%20Aguascalientes&z=15&output=embed"
+                width="100%"
+                height="420"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+        <a 
+            href="https://www.google.com/maps/search/?api=1&query=Vinicola+El+Aguaje+Aguascalientes"
+            target="_blank"
+            class="btn-mapa">
+
+            Ver en Google Maps
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ================= NUESTROS VINOS ================= -->
+<section id="vinos" class="section vinos">
+
+<h2 class="titulo-vinos">Conoce nuestros vinos de calidad</h2>
+
+<div class="contenedor-vinos">
+
+<!-- VINO 1 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/Vinot1.jpeg" alt="Cabernet Sauvignon">
+</div>
+
+<h3>Vino Tinto</h3>
+
+<input type="checkbox" id="vino1">
+<label for="vino1" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Malbec y Syrah.</p>
+<p><strong>Crianza:</strong> 12 meses en barrica de roble francés blanco.</p>
+<p><strong>Temperatura a servir:</strong> 16 a 18 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 13.3%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>color rojo intenso con  destellos violáceos.</p>
+<p><strong>Aroma:</strong>Aroma intenso a frutos rojos y negros y complementados por notas especiadas de vainilla
+y un ligero toque ahumado proveniente de la crianza en barrica.</p>
+<p><strong>Paladar :</strong>Es estructurado y equilibrado, con taninos sedosos y una acidez vibrante.</p>
+<p><strong>Mariaje:</strong>Se marida bien con carnes rojas asadas,estofados, pastas con salsas robustas y quesos maduros.</p>
+</div>
+</div>
+
+<!-- VINO 2 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/Vinot2.jpeg" alt="Chardonnay">
+</div>
+
+<h3>Vino Blanco</h3>
+
+<input type="checkbox" id="vino2">
+<label for="vino2" class="btn-info">Ver información</label>
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Chenin Blanc.</p>
+<p><strong>Crianza:</strong> Vino Joven.</p>
+<p><strong>Temperatura a servir:</strong> 16 a 18 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 10.9%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>color amarillo pálido con reflejos verdosos brillante y limpio.</p>
+<p><strong>Aroma:</strong>Flores blancas como manzanilla, gardenias y acacia, con delicadas notas de cera de miel y un sutil toque de vainilla.</p>
+<p><strong>Paladar :</strong>Presenta una acidez alta, con presencia de notas florales y cítricas, y una permanencia media-alta que resalta su frescura y elegancia.</p>
+<p><strong>Mariaje:</strong>Ligero, fresco y equilibrado, con buena acidez y final persistente.ideal para paladares que buscan un blanco refrescante.</p>
+</div>
+</div>
+
+<!-- VINO 3 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/Vinot3.jpeg" alt="Rosé">
+</div>
+
+<h3>Malbec Monovarietal</h3>
+
+<input type="checkbox" id="vino3">
+<label for="vino3" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong>Malbec Monovarietal.</p>
+<p><strong>Crianza:</strong> 16 meses en barrica de roble francés blanco.</p>
+<p><strong>Temperatura a servir:</strong> 16 a 18 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 13.3%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>Limpio rojo púrpura.</p>
+<p><strong>Aroma:</strong>Aroma intenso a madera fresca con notas herbáceas</p>
+<p><strong>Paladar :</strong>Sensaciones de vainilla y especias . De estructura robusta, taninos suaves y elegantes.</p>
+<p><strong>Mariaje:</strong>Acompaña muy bien a carnes rojas a la parrilla y de caza, quesos maduros y pastas con salsa de tomate.</p>
+</div>
+</div>
+
+
+<!-- VINO 4 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/Vinot4.jpeg" alt="Merlot">
+</div>
+
+<h3>Nebbiolo</h3>
+
+<input type="checkbox" id="vino4">
+<label for="vino4" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Nebbiolo.</p>
+<p><strong>Crianza:</strong> Vino Joven.</p>
+<p><strong>Temperatura a servir:</strong> 12 a 15 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 13.8%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>color rojo rubí brillante de capa media.</p>
+<p><strong>Aroma:</strong>Intensos de frutos rojos como cereza, grosella y granada, acompañados de notas lácticas y especias sutiles como pimienta negra y clavo.</p>
+<p><strong>Paladar :</strong>Se confirman los frutos rojos, con una acidez media-alta , taninos suaves y un final medio que deja una sensación fresca y frutal en el paladar.</p>
+<p><strong>Mariaje:</strong>Perfecto para acompañar pastas,pizzas,carnes frias, quesos semimaduros y platillos especiados.</p>
+</div>
+</div>
+
+
+<!-- VINO 5 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/Vinot5.jpeg" alt="Merlot">
+</div>
+
+<h3>Puerta Abierta Vino Tinto</h3>
+
+<input type="checkbox" id="vino5">
+<label for="vino5" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Malbec Monovarietal.</p>
+<p><strong>Crianza:</strong> 16 meses en barrica de roble francés blanco.</p>
+<p><strong>Temperatura a servir:</strong> 16 a 18 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 13.3%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>Limpio rojo púrpura.</p>
+<p><strong>Aroma:</strong>Aroma intenso a madera fresca con notas herbáceas.</p>
+<p><strong>Paladar :</strong>Sensaciones de vainilla y especias. De estructura robusta taninos suaves y elegantes.</p>
+<p><strong>Mariaje:</strong>Acompaña muy bien a carnes rojas a la parrilla y de caza , quesos maduros y pastas con salsa de tomate.</p>
+</div>
+</div>
+
+
+<!-- VINO 6 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/Vinot6.jpeg" alt="Merlot">
+</div>
+
+<h3>Syrah</h3>
+
+<input type="checkbox" id="vino6">
+<label for="vino6" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Syrah.</p>
+<p><strong>Crianza:</strong> 16 meses en barrica de roble frances blanco.</p>
+<p><strong>Temperatura a servir:</strong> 16 a 18 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 12.5%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>Rojo profundo con matices violaceos y capa alta.</p>
+<p><strong>Aroma:</strong>Intensos de frutos rojos como cereza, grosella y granada, acompañados de notas lácticas y especias sutiles como pimienta negra y clavo.</p>
+<p><strong>Paladar :</strong>Se confirman los frutos rojos, con una acidez media-alta , taninos suaves y un final medio que deja una sensación fresca y frutal en el paladar.</p>
+<p><strong>Mariaje:</strong>Perfecto para acompañar pastas,pizzas,carnes frias, quesos semimaduros y platillos especiados.</p>
+</div>
+</div>
+
+
+<!-- VINO 7 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinot7.jpeg" alt="Merlot">
+</div>
+
+<h3>Merlot</h3>
+
+<input type="checkbox" id="vino7">
+<label for="vino7" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Merlot.</p>
+<p><strong>Crianza:</strong> Vino Joven.</p>
+<p><strong>Temperatura a servir:</strong> 16 a 18 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 13.6%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>color rosa palido con destellos salamon.</p>
+<p><strong>Aroma:</strong>Notas frecas de fresa, frambuesa y durazno con toques florales y un sutil fondo citrico.</p>
+<p><strong>Paladar :</strong>Ligero y equilibrado con una acidez refrescante que resalta sus sabores frutales y un final suave y persistente.</p>
+<p><strong>Mariaje:</strong>Ideal para acompañar mariscos,sushi,ensaladas frescas,pastas ligeras y platos mediterraneos.</p>
+</div>
+</div>
+
+
+<!-- VINO 8 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinot8.jpeg" alt="Merlot">
+</div>
+
+<h3>Sauvignon Blanc</h3>
+
+<input type="checkbox" id="vino8">
+<label for="vino8" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Sauvignon Blanc.</p>
+<p><strong>Crianza:</strong> Vino Joven.</p>
+<p><strong>Temperatura a servir:</strong> 12 a 15 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 13.9%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>color amarillo palido con reflejos verdosos.</p>
+<p><strong>Aroma:</strong>Intensos aromas a citricos,maracuya,piña y hierba fresca con notas minerales.</p>
+<p><strong>Paladar :</strong>Fresco y vibrantes con acidez crujiente y sabores a lima,toronja y frutas tropicales. Final largo y refrescante.</p>
+<p><strong>Mariaje:</strong>Perfecto para acompañar mariscos,ceviche,ensaladas frescas,sushi y quesos de cabra.</p>
+</div>
+</div>
+
+
+<!-- VINO 9  Continuar ese -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/Vinot9.jpeg" alt="Merlot">
+</div>
+
+<h3>Malbec y Syrah</h3>
+
+<input type="checkbox" id="vino9">
+<label for="vino9" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Origen:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Malbec y Syrah.</p>
+<p><strong>Crianza:</strong> 12 meses en barrica de roble francés blanco.</p>
+<p><strong>Temperatura a servir:</strong> 16 a 18 grados centígrados.</p>
+<p><strong>Grado alcohólico:</strong> 13.3%</p>
+<p><strong>Notas de cata :</strong></p>
+<p><strong>Aspecto:</strong>color rojo intenso con destellos violaceos.</p>
+<p><strong>Aroma:</strong>Aroma intensos a frutos rojos y negros y complementados por notas especiadas , de vainilla y un ligero toque ahumado proveniente de la crianza en barrica.</p>
+<p><strong>Paladar :</strong>Es estructurado y equilibrado con taninos seodosos y una acidez vibrantes.</p>
+<p><strong>Mariaje:</strong>Se marida bien con carnes rojas asadas, estofados,pastas con salsas robustas y quesos maduros.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+<!-- ================= GALERÍA ================= -->
+<section id="galeria" class="galeria">
+
+<h2 class="titulo-galeria">Galería de la Vinícola</h2>
+
+<div class="carrusel">
+
+<div class="carrusel-track">
+
+<img src="img/aguaje1.jpg" alt="Viñedos">
+<img src="img/aguaje2.jpg" alt="Producción">
+<img src="img/aguaje3.jpg" alt="Barricas">
+<img src="img/aguaje4.jpg" alt="Cosecha">
+<img src="img/aguaje5.jpg" alt="Botellas">
+<img src="img/aguaje6.png" alt="Paisaje">
+
+</div>
+
+</div>
+<!-- VISOR DE IMÁGENES -->
+<div id="visor" class="visor">
+    <span class="cerrar">&times;</span>
+    <img class="visor-img" id="img-grande">
+</div>
+
+</section>
+<!-- ================= BOTONES FLOTANTES ================= -->
+<div class="redes-flotantes">
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/TuPagina" target="_blank" class="btn-facebook"><i class="fab fa-facebook-f"></i></a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Bodegas de Origen</p>
+</footer>
+
+<!-- ================= LEAFLET JS ================= -->
+<script>
+    // Mapa centrado en Vinícola El Sarmiento
+    var map = L.map('map').setView([22.176, -102.272], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([22.176, -102.272])
+        .addTo(map)
+        .bindPopup(`<h4>Vinícola El Sarmiento</h4><p>Tradición y calidad en cada botella.</p>`);
+</script>
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const position = sec.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(position < screen - 100){
+sec.classList.add('visible');
+}
+});
+});
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
+});
+</script>
+<script>
+function toggleMenu() {
+
+    const menu = document.getElementById("menu");
+
+    menu.classList.toggle("active");
+}
+
+/* CERRAR MENU AL DAR CLICK FUERA */
+document.addEventListener("click", function(event){
+
+    const menu = document.getElementById("menu");
+
+    const boton = document.querySelector(".hamburger");
+
+    if(
+        !menu.contains(event.target) &&
+        !boton.contains(event.target)
+    ){
+        menu.classList.remove("active");
+    }
+});
+</script>
+</body>
+</html>

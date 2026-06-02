@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinícola Santa Elena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="santa.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+<header class="header">
+
+    <!-- BARRA BLANCA DE LOGOS -->
+    <div class="logos-bar">
+        <div class="logo left">
+            <img src="img/Logo_Ayundamiento.png" alt="Ayuntamiento de Pabellón">
+        </div>
+
+        <div class="logo center">
+            <img src="img/logo_fiestasteatro.png" alt="Teatro del Pueblo">
+        </div>
+
+        <div class="logo right">
+            <img src="img/logo_ferias.png" alt="Feria Regional">
+        </div>
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+<nav class="hero-nav">
+
+    <a href="Tierrasdevino.html" class="btn-volver">
+        ← Volver
+    </a>
+
+    <button class="hamburger" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <div class="menu-hamburguesa" id="menu">
+
+        <a href="#historia">Nuestra Historia</a>
+
+        <a href="#vinos">Nuestros Vinos</a>
+
+        <a href="#mapa">Ubicación</a>
+
+        <a href="#galeria">Galería</a>
+
+    </div>
+
+</nav>
+ <div class="hero-content">
+    <h1>Vinicola Santa Elena</h1>
+    <p>Tradición, pasión y calidad en cada botella.
+    Descubre nuestra historia y nuestros vinos únicos.</p>
+</section>
+<!-- ================= NUESTRA HISTORIA ================= -->
+<section class="historia section" id="historia">
+
+    <h2 class="titulo-historia">Nuestra Historia</h2>
+
+    <div class="historia-contenedor">
+
+        <div class="historia-texto">
+    <p>
+        Vinicola Santa Elena es uno de los proyectos enológicos más emblemáticos de Aguascalientes. con más de 20 años de historia
+        , ha logrado combinar tradición y modernidad para ofrecer experiencias enoturísticas únicas en la región.
+        <br><br>
+        Aquí puedes conectarte con el vino desde su origen,recorridos viñedos,bodegas y Barricas
+        , mientras conoces sus procesos de producción.
+        <br><br>
+        Al final , disfrutarás de una cata guiada que revela la identidad y riqueza de esta tierra
+        vitivinícola.
+        <br><br>
+        <strong>Vinícola Santa Elena </strong>
+    </p>
+</div>
+
+<div class="historia-imagen">
+<img src="img/santa4.PNG" alt="Hacienda de Letras">
+</div>
+</div>
+</section>
+<!-- ================= CÓMO LLEGAR ================= --> 
+<section id="mapa" class="seccion-mapa">
+
+<div class="contenido-mapa">
+
+<h2>Cómo llegar a Vinícola Santa Elena</h2>
+
+<p>
+Visítanos y descubre nuestros vinos artesanales en un ambiente natural.
+Te esperamos para que vivas una experiencia única entre viñedos.
+</p>
+
+<div class="mapa-container">
+
+<iframe
+src="https://maps.google.com/maps?q=Vinicola%20Santa%20Elena&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="420"
+style="border:0;"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</div>
+
+<a 
+href="https://www.google.com/maps/search/?api=1&query=Vinicola+Santa+Elena"
+target="_blank"
+class="btn-mapa">
+Ver en Google Maps
+</a>
+
+</div>
+
+</section>
+<!-- ================= NUESTROS VINOS ================= -->
+<section id="vinos" class="section vinos">
+
+<h2 class="titulo-vinos">Conoce nuestros vinos de calidad</h2>
+
+<div class="contenedor-vinos">
+
+<!-- VINO 1 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinosanta1.PNG" alt="Cabernet Sauvignon">
+</div>
+
+<h3>Sphie Vino Tinto</h3>
+
+<input type="checkbox" id="vino1">
+<label for="vino1" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong> Pabellón de Arteaga , Aguascalientes, (Valle de Montegrande) suelo:Arcillo-Arenoso , Altura:1,950 M.S.N.M.</p>
+<p><strong>Varietal :</strong> Cabernet Franc 100% 13.8% Alc.Vol.</p>
+<p><strong>Vinificación:</strong> Fermentación en foudres de madera y acero inoxidable.</p>
+<p><strong>Crianza:</strong> 6 meses en foudre posteriormente pasa 12 meses a barrica.18 meses en roble francés nueva.</p>
+<p><strong>Vista:</strong>Es un vino de color profundo y limpio.</p>
+<p><strong>Nariz :</strong>Se percibe principalmente la fruta sin dejar de ser complejo, aroma
+de frutos negros como la zarzamora y ciruela, con notas sutiles de vainilla, canela y pimienta negra que sugieren una crianza respetuosa.</p>
+<p><strong>Boca:</strong>Excelente estructura,armonioso.</p>
+</div>
+</div>
+
+<!-- VINO 2 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinosanta2.PNG" alt="Chardonnay">
+</div>
+
+<h3>Vino Blanco</h3>
+
+<input type="checkbox" id="vino2">
+<label for="vino2" class="btn-info">Ver información</label>
+<div class="vino-info">
+<p><strong>Región:</strong> Pabellón de Arteaga , Aguascalientes, (Valle de Montegrande) suelo:Arcillo-Arenoso , Altura:1,950 M.S.N.M.</p>
+<p><strong>Varietal :</strong> Nebbiolo 100% 13.8% Alc.Vol.</p>
+<p><strong>Vinificación:</strong> Fermentación en foudres de madera, tinta de concreto y acero inoxidable.</p>
+<p><strong>Crianza:</strong>12 meses en foudre, concreto y barricas de primer uso.</p>
+<p><strong>Vista:</strong>Carmín con ribete atejado.</p>
+<p><strong>Nariz :</strong>Frutos rojos, cereza, ciertas notas florales y tostadas.</p>
+<p><strong>Boca:</strong>Vino ligero y completo, con taninos maduros y suaves, buen balance de acidez, en boca predomina fruta fresca. .</p>
+</div>
+</div>
+<!-- VINO 3 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinosanta3.PNG" alt="Rosé">
+</div>
+
+<h3>Sophie Rosé</h3>
+<h3>Vino Rosado</h3>
+<input type="checkbox" id="vino3">
+<label for="vino3" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong> Pabellón de Arteaga , Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Cabernet Franc 100%.</p>
+<p><strong>Vinificación:</strong> Acero inoxidable.</p>
+<p><strong>Crianza:</strong>3 meses en tanque de concreto.</p>
+<p><strong>Vista:</strong>Aspecto brillante, limpio y un color rosa salmón.</p>
+<p><strong>Nariz :</strong>Personalidad muy frutal, con notas a durazno , frambuesa, cítricos de toronja y una ligera nota de almendra.</p>
+<p><strong>Boca:</strong>Excelente acidez , buen balance, armonia en boca con un toqu de notas de toronja.</p>
+</div>
+</div>
+
+
+<!-- VINO 4 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/vinosanta4.PNG" alt="Merlot">
+</div>
+
+<h3>Sophie</h3>
+<h3>Vino Blanco</h3>
+
+<input type="checkbox" id="vino4">
+<label for="vino4" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong> San Francisco de los Romos, Aguascalientes, México.</p>
+<p><strong>Varietal :</strong> Chenin Blanc 80% y Viognier 20% 12.4% Alc.Vol.</p>
+<p><strong>Vinificación:</strong>Fermentación en acero inoxidable, foudres y tinas de concreto .</p>
+<p><strong>Crianza:</strong>Viognier son 9 meses en ánforas de barro y el Chennin Blanc son 9 meses en barrica de roble francés de primer uso.</p>
+<p><strong>Vista:</strong>Amarillo pajizo con destellos verdes.</p>
+<p><strong>Nariz :</strong>Jazmín,durazno y chabacano con notas ligeras de roble y vainilla aroma a tarta de limon. </p>
+<p><strong>Boca:</strong>Acidez balanceada, vino ligero y brillante, complejo, con cuerpo medio y excelente sensación en boca.</p>
+</div>
+</div>
+
+
+
+<!-- VINO 5 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/entrelineas.PNG" alt="Merlot">
+</div>
+
+<h3>Entrelíneas</h3>
+<h3>Vino Tinto 2023</h3>
+
+<input type="checkbox" id="vino5">
+<label for="vino5" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong>Pabellón de Arteaga(Valle de Montegrande).</p>
+<p><strong>Varietal :</strong> Malbec,Syrah,Nebbiolo 13.8% Alc.Vol.</p>
+<p><strong>Vinificación:</strong>Cosecha manual. Fermentación de cada  variedad de manera individual en tanques de madera, concreto y acero inoxidable.</p>
+<p><strong>Crianza:</strong>Crianza de 8 a 10 meses en barricas de robles francés y en tanque de concreto.</p>
+<p><strong>Vista:</strong>Limpio brillante de capa media y de color granate con destellos cereza.</p>
+<p><strong>Nariz :</strong>Alta intensidad aromática.Frutos como ciruela,grosella y moras</p>
+<p><strong>Boca:</strong>Suave y amable, con taninos redondos que lo hacen más fácil de beber, pero cierta complejidad.</p>
+</div>
+</div>    
+
+
+
+<!-- VINO 6 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/blanco.PNG" alt="Merlot">
+</div>
+
+<h3>Entrelíneas</h3>
+<h3>Vino Blanco 2021</h3>
+
+<input type="checkbox" id="vino6">
+<label for="vino6" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong>Pabellón de Arteaga(Valle de Montegrande).</p>
+<p><strong>Varietal :</strong>Blanc de Blancs 12.2% Alc.Vol.</p>
+<p><strong>Vinificación:</strong>4 meses de reposo en barricas de roble francés.</p>
+<p><strong>Vista:</strong>Limpio brillante , de color amarillo pajizo con reflejos dorados con evolución.</p>
+<p><strong>Nariz :</strong>Resaltan las frutas amarillas,manzanas,guayaba y carambola, muy fresca con un ligero toque de nueces.</p>
+<p><strong>Boca:</strong>Tiene un incio amable donde las frutas dominan, destaca la guayaba y se reveka tambien algo de mandarina en la boca media que al llegar al final armoniza con un leve toque de nuez.</p>
+</div>
+</div>    
+
+
+<!-- VINO 7 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/tabla1.PNG" alt="Merlot">
+</div>
+
+<h3>Tabla No.1</h3>
+<h3>Vino Tinto 2021</h3>
+
+<input type="checkbox" id="vino7">
+<label for="vino7" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong>Pabellón de Arteaga,Aguascalientes,México.</p>
+<p><strong>Varietal :</strong>Malbec 13.8% Alc.Vol.</p>
+<p><strong>Vinificación:</strong>Cosecha manual. Fermentación alcohólica y maloláctica en tonel de roble. Crianza en barricas de roble francés.</p>
+<p><strong>Vista:</strong>Púrpura con destellos cereza y ribete granate, alta intensidad de color. Limpio y brillante, con altadensidad en lágrimas.</p>
+<p><strong>Nariz :</strong>Frutos negros maduros como ciruela y zarzamora. Especias como
+canela y un toque de vainilla. Presenta una nota láctica a yogurt de fresa y un toque de pan tostado</p>
+<p><strong>Boca:</strong>Ataque intenso, de alcohol cálido, tanino aterciopelado y acidez
+pronunciada pero armoniosa. Untuoso, con mucho cuerpo y estructura. Mucha fruta madura y especias en el post gusto.</p>
+</div>
+</div>  
+
+
+<!-- VINO 8 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/entresueños.PNG" alt="Merlot">
+</div>
+
+<h3>Entresueños</h3>
+<h3>Vino Rosado 2022</h3>
+<input type="checkbox" id="vino8">
+<label for="vino8" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong>San Francisco de los Romos, Aguascalientes, Mexico.</p>
+<p><strong>Varietal :</strong>Malbec 10.8% Alc.Vol.</p>
+<p><strong>Vinificación:</strong>Cosecha manual entre el 15 y el 17 de septiembre de 2018 y 8 horas de maceracion con piel y semillas y su fermentacion es en tanque de acero inoxidable.</p>
+<p><strong>Vista:</strong>tiene un color salmon intenso con destellos dorados y brillantes.</p>
+<p><strong>Nariz :</strong>Fresco , con matices a fresas y duraznos, abre despues de unos segundos y se vuelve un poco mas " dulce" conforme pasan los minutos.</p>
+<p><strong>Boca:</strong>citrico en madurez, algo de toronja y durazno.vino largo y que va adquiriendo cierta complejidad.</p>
+</div>
+</div>  
+
+
+<!-- VINO 9  Continuar ese -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/champa.PNG" alt="Merlot">
+</div>
+
+<h3>Entresueños Fruite Rose</h3>
+<h3>Vino Rosado Semiseco 2022</h3>
+
+<input type="checkbox" id="vino9">
+<label for="vino9" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong>Región:</strong>Pabellón de Arteaga, Aguascalientes, Mexico.</p>
+<p><strong>Varietal :</strong>Blend de tintas 11% Alc.Vol.</p>
+<p><strong>Vista:</strong>Brillante rosa salmón, delicada y continua burbuja</p>
+<p><strong>Nariz :</strong>intensidad aromática frutal evocando notas de grosella, frambuesa, fresa y arándonos.</p>
+<p><strong>Boca:</strong>Elegante vino al paladar de caracter dulce, se percibe afrutado denotando notas a frutos rojos,canela,flor de jamaica y levaduras.</p>
+</div>
+</div>  
+
+</div>
+
+</section>
+<!-- ================= GALERÍA ================= -->
+<section class="galeria">
+
+<h2 class="titulo-galeria">Galería de la Vinícola</h2>
+
+<div class="carrusel">
+
+<div class="carrusel-track">
+
+<img src="img/santa1.PNG" alt="Viñedos">
+<img src="img/santa2.PNG" alt="Producción">
+<img src="img/santa3.PNG" alt="Barricas">
+<img src="img/santa4.PNG" alt="Cosecha">
+<img src="img/santa5.PNG" alt="Botellas">
+
+</div>
+
+</div>
+<!-- VISOR DE IMÁGENES -->
+<div id="visor" class="visor">
+    <span class="cerrar">&times;</span>
+    <img class="visor-img" id="img-grande">
+</div>
+
+</section>
+<!-- ================= BOTONES FLOTANTES ================= -->
+<div class="redes-flotantes">
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/TuPagina" target="_blank" class="btn-facebook"><i class="fab fa-facebook-f"></i></a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Bodegas de Origen</p>
+</footer>
+
+<!-- ================= LEAFLET JS ================= -->
+<script>
+    // Mapa centrado en Vinícola El Sarmiento
+    var map = L.map('map').setView([22.176, -102.272], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([22.176, -102.272])
+        .addTo(map)
+        .bindPopup(`<h4>Vinícola El Sarmiento</h4><p>Tradición y calidad en cada botella.</p>`);
+</script>
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const position = sec.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(position < screen - 100){
+sec.classList.add('visible');
+}
+});
+});
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
+});
+</script>
+<script>
+function toggleMenu() {
+
+    const menu = document.getElementById("menu");
+
+    menu.classList.toggle("active");
+}
+
+/* CERRAR MENU AL DAR CLICK FUERA */
+document.addEventListener("click", function(event){
+
+    const menu = document.getElementById("menu");
+
+    const boton = document.querySelector(".hamburger");
+
+    if(
+        !menu.contains(event.target) &&
+        !boton.contains(event.target)
+    ){
+        menu.classList.remove("active");
+    }
+});
+</script>
+</body>
+</html>

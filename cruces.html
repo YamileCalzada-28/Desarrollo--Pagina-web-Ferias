@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinícola Viña las Cruces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="cruces.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+<header class="header">
+
+    <!-- BARRA BLANCA DE LOGOS -->
+    <div class="logos-bar">
+        <div class="logo left">
+            <img src="img/Logo_Ayundamiento.png" alt="Ayuntamiento de Pabellón">
+        </div>
+
+        <div class="logo center">
+            <img src="img/logo_fiestasteatro.png" alt="Teatro del Pueblo">
+        </div>
+
+        <div class="logo right">
+            <img src="img/logo_ferias.png" alt="Feria Regional">
+        </div>
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+<nav class="hero-nav">
+
+    <a href="Tierrasdevino.html" class="btn-volver">
+        ← Volver
+    </a>
+
+    <button class="hamburger" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <div class="menu-hamburguesa" id="menu">
+
+        <a href="#historia">Nuestra Historia</a>
+
+        <a href="#vinos">Nuestros Vinos</a>
+
+        <a href="#mapa">Ubicación</a>
+
+        <a href="#galeria">Galería</a>
+
+    </div>
+
+</nav>
+<!-- CONTENIDO HERO -->
+<div class="hero-content">
+    <h1>TIERRAS DE VINOS</h1>
+
+    <p>
+        Explora cada una de las vinícolas que forman parte de esta experiencia única.
+        Vive el sabor, la tradición y la cultura de nuestra tierra.
+    </p>
+
+    <a href="#actividades" class="hero-btn">Ver Todo</a>
+</div>
+</section>
+<!-- ================= NUESTRA HISTORIA ================= -->
+<section class="historia section" id="historia">
+
+    <h2 class="titulo-historia">Nuestra Historia</h2>
+
+    <div class="historia-contenedor">
+
+        <div class="historia-texto">
+    <p>
+        Somos un viñedo con 12 años en el cultivo de la uva, y ahora incursiando en el enoturismo como una actividad tanto para
+        los conocedores de vino , como a la gente que les gustan las experiencias en el vino nuestro objetivo es ser referentes en el 
+        vino nuestro objetivo.
+        <br><br>
+        es ser referentes en el estado y a nivel republica por las experiencias que ofrecemos, vinos,gastronomia, talleres,catas
+        y demas servicios.
+        <br><br>
+        Hermoso viñedo de 3.5 has, ubicado en lugar privilegiado, en un clima moderado que cuenta con espacios para disfrutar del vino y la buena compañia
+        con construcción de piedra.
+        contamos con excelente enólogo, sommelier y chef instalaciones adecuadas para dar buen servicio elaboración de vinos y ofrecemos variedades de vino
+        y galardonados, seleccionados cuidadosamente.
+        <br><br>
+        <strong>Vinícola Viña las Cruces </strong>
+    </p>
+</div>
+<div class="historia-imagen">
+<img src="img/cruces3.PNG" alt="Hacienda de Letras">
+</div>
+</div>
+</section>
+<!-- ================= CÓMO LLEGAR ================= --> 
+<section id="mapa" class="seccion-mapa">
+
+<div class="contenido-mapa">
+
+<h2>Cómo llegar a Vinícola Viña las Cruces</h2>
+
+<p>
+Visítanos y descubre nuestros vinos artesanales en un ambiente natural.
+Te esperamos para que vivas una experiencia única entre viñedos.
+</p>
+
+<div class="mapa-container">
+
+<iframe
+src="https://maps.google.com/maps?q=Vin%C3%ADcola%20Vi%C3%B1a%20las%20Cruces&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="420"
+style="border:0;"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</div>
+
+<a 
+href="https://www.google.com/maps/search/?api=1&query=Vin%C3%ADcola+Vi%C3%B1a+las+Cruces"
+target="_blank"
+class="btn-mapa">
+Ver en Google Maps
+</a>
+
+</div>
+
+</section>
+<!-- ================= NUESTROS VINOS ================= -->
+<section id="vinos" class="section vinos">
+
+<h2 class="titulo-vinos">Conoce nuestros vinos de calidad</h2>
+
+<div class="contenedor-vinos">
+
+<!-- VINO 1 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/cruces8.PNG" alt="Cabernet Sauvignon">
+</div>
+
+<h3>Amelie</h3>
+
+<input type="checkbox" id="vino1">
+<label for="vino1" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong> </p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+</div>
+</div>
+
+<!-- VINO 2 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/cruces9.PNG" alt="Chardonnay">
+</div>
+
+<h3>Matias Blanc</h3>
+
+<input type="checkbox" id="vino2">
+<label for="vino2" class="btn-info">Ver información</label>
+<div class="vino-info">
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong> </p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+</div>
+</div>
+
+<!-- VINO 3 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/cruces10.PNG" alt="Rosé">
+</div>
+
+<h3>Luciana Rosé</h3>
+<input type="checkbox" id="vino3">
+<label for="vino3" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong> </p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+</div>
+</div>
+
+
+
+<!-- VINO 4 -->
+<div class="vino-card">
+<div class="vino-imagen">
+<img src="img/cruces11.PNG" alt="Merlot">
+</div>
+
+<h3>Vino Tinto</h3>
+
+<input type="checkbox" id="vino4">
+<label for="vino4" class="btn-info">Ver información</label>
+
+<div class="vino-info">
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong> </p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+</div>
+</div>
+
+</section>
+<!-- ================= GALERÍA ================= -->
+<section class="galeria">
+
+<h2 class="titulo-galeria">Galería de la Vinícola</h2>
+
+<div class="carrusel">
+
+<div class="carrusel-track">
+
+<img src="img/cruces1.PNG" alt="Viñedos">
+<img src="img/cruces2.PNG" alt="Producción">
+<img src="img/cruces3.PNG" alt="Barricas">
+<img src="img/cruces4.PNG" alt="Cosecha">
+<img src="img/cruces5.PNG" alt="Botellas">
+
+</div>
+
+</div>
+<!-- VISOR DE IMÁGENES -->
+<div id="visor" class="visor">
+    <span class="cerrar">&times;</span>
+    <img class="visor-img" id="img-grande">
+</div>
+
+</section>
+<!-- ================= BOTONES FLOTANTES ================= -->
+<div class="redes-flotantes">
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/TuPagina" target="_blank" class="btn-facebook"><i class="fab fa-facebook-f"></i></a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Bodegas de Origen</p>
+</footer>
+
+<!-- ================= LEAFLET JS ================= -->
+<script>
+    // Mapa centrado en Vinícola El Sarmiento
+    var map = L.map('map').setView([22.176, -102.272], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([22.176, -102.272])
+        .addTo(map)
+        .bindPopup(`<h4>Vinícola El Sarmiento</h4><p>Tradición y calidad en cada botella.</p>`);
+</script>
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const position = sec.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(position < screen - 100){
+sec.classList.add('visible');
+}
+});
+});
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
+});
+</script>
+<script>
+function toggleMenu() {
+
+    const menu = document.getElementById("menu");
+
+    menu.classList.toggle("active");
+}
+
+/* CERRAR MENU AL DAR CLICK FUERA */
+document.addEventListener("click", function(event){
+
+    const menu = document.getElementById("menu");
+
+    const boton = document.querySelector(".hamburger");
+
+    if(
+        !menu.contains(event.target) &&
+        !boton.contains(event.target)
+    ){
+        menu.classList.remove("active");
+    }
+});
+</script>
+</body>
+</html>

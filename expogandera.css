@@ -1,0 +1,1451 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --azul: #0a3d62;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: white;
+    padding: 15px 40px;
+}
+
+.logos-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+}
+
+/* CONTENEDOR DE LOGOS */
+.logos-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+/* LOGOS */
+.logo img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+/* POSICIÓN DE LOGOS */
+.logo.left {
+    justify-self: start;
+}
+
+.logo.center {
+    justify-self: center;
+}
+
+.logo.right {
+    justify-self: end;
+}
+/* ================= HERO / FONDO AZUL ================= */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #0a3d62, #0a3d62);
+    color: white;
+    text-align: center;
+    padding: 140px 20px 120px;
+}
+/* ================= NAV ================= */
+.nav {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-volver {
+    margin-right: auto;
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.btn-volver:hover {
+
+    background:white;
+
+    color:var(--azul);
+
+    transform:none;
+}
+
+.hamburger {
+    margin-left: auto;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+/* ========================================= */
+/* MENU PREMIUM MODERNO */
+/* ========================================= */
+
+.menu-hamburguesa{
+
+    position:absolute;
+
+    top:65px;
+    right:15px;
+
+    width:220px;
+
+    padding:14px;
+
+    display:none;
+    flex-direction:column;
+    gap:12px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.18);
+
+    animation:menuAnim .35s ease;
+
+    z-index:9999;
+}
+
+/* LINKS */
+
+.menu-hamburguesa a{
+
+    position:relative;
+
+    padding:15px 18px;
+
+    border-radius:18px;
+
+    text-decoration:none;
+
+    color:#0a3d62;
+
+    font-weight:600;
+
+    font-size:17px;
+
+    transition:all .3s ease;
+
+    overflow:hidden;
+}
+
+/* HOVER */
+
+.menu-hamburguesa a:hover{
+
+    background:
+    linear-gradient(
+    135deg,
+    #0a3d62,
+    #145a86
+    );
+
+    color:white;
+
+    transform:translateX(6px);
+
+    box-shadow:
+    0 10px 25px rgba(10,61,98,.35);
+}
+
+/* ANIMACIÓN */
+
+@keyframes menuAnim{
+
+    from{
+        opacity:0;
+        transform:translateY(-15px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* ================= ESTADÍSTICAS ================= */
+.estadisticas {
+    background: white;
+    color: var(--azul);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--azul);
+}
+
+.stat p {
+    font-size: 1rem;
+    opacity: .9;
+}
+
+/* ================= DESCRIPCIÓN ================= */
+.expo {
+    padding: 100px 12%;
+    background: linear-gradient(to bottom, #ffffff, var(--gris-fondo));
+    text-align: center;
+}
+
+.expo h2 {
+    font-size: 2.2rem;
+    color: var(--azul);
+    margin-bottom: 30px;
+}
+
+.expo p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* ================= GALERÍA ================= */
+.galeria {
+    padding: 80px 12%;
+    background: white;
+}
+
+.galeria h2 {
+    color: var(--azul);
+    margin-bottom: 40px;
+}
+
+.expo-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.foto {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
+.foto img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform .5s ease;
+    cursor: pointer;
+}
+
+.foto:hover img {
+    transform: scale(1.08);
+}
+
+/* ================= UBICACIÓN ================= */
+
+.ubicacion {
+
+    padding: 90px 10%;
+
+    background: #ffffff;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px; /* 🔥 separación más bonita */
+
+    align-items: center;
+}
+
+/* TEXTO */
+.ubicacion-info h2 {
+
+    font-size: 2.4rem;
+
+    color: #0a3d62;
+
+    margin-bottom: 20px;
+}
+
+.ubicacion-info p {
+
+    font-size: 1.05rem;
+
+    margin-bottom: 15px;
+
+    line-height: 1.8;
+
+    color: #444;
+}
+
+/* MAPA */
+.ubicacion-mapa iframe {
+
+    width: 100%;
+
+    height: 320px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+
+    transition: .3s ease;
+}
+
+/* EFECTO */
+.ubicacion-mapa iframe:hover {
+
+    transform: scale(1.01);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .ubicacion{
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 70px 20px;
+    }
+
+    .ubicacion-info{
+
+        text-align: center;
+    }
+
+}
+/* ================= FRASE FINAL ================= */
+.frase-final {
+    background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    padding-top: 80px;
+}
+
+.lightbox-img {
+    max-width: 85%;
+    max-height: 80%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.6);
+    animation: zoom .3s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.cerrar {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .estadisticas {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .expo-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .ubicacion {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+}
+/* BOTÓN PRINCIPAL HERO */
+.btn-principal {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: white;
+    color: var(--azul);
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.btn-principal:hover {
+    background: var(--gris-fondo);
+    transform: scale(1.05);
+}
+
+/* ================= EXPO MEJORADA ================= */
+.expo {
+    padding: 120px 12%;
+    background: linear-gradient(to right, #ffffff, var(--gris-fondo));
+}
+
+.expo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.expo-texto h2 {
+    font-size: 2.4rem;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.linea {
+    width: 80px;
+    height: 4px;
+    background: var(--azul);
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.expo-texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.expo-imagen img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.2);
+    transition: .4s ease;
+}
+
+.expo-imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Botón secundario */
+.btn-secundario {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: var(--azul);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.btn-secundario:hover {
+    background: var(--azul-claro);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .expo-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .linea {
+        margin: 0 auto 25px;
+    }
+}
+
+/* ==========================
+   GALERÍA 
+   ========================== */
+
+.galeria-chula {
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #fdf6f0, #fff);
+    text-align: center;
+}
+
+/* ==========================
+   TÍTULO GALERÍA
+   ========================== */
+
+.titulo-galeria {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--azul); /* Azul principal de tu página */
+    font-family: 'Poppins', sans-serif; /* Misma tipografía */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Línea decorativa debajo del título */
+.titulo-galeria::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--azul);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+
+/* Grid tipo Pinterest */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+/* ==========================
+   GALERÍA LIMPIA Y ELEGANTE
+   ========================== */
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen */
+.item img {
+    width: 100%;
+    height: 320px; /* altura fija para que todas se vean iguales */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Imagen grande */
+.item.grande {
+    grid-row: span 2;
+}
+
+/* Hover suave */
+.item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .item img {
+        height: 250px;
+    }
+
+    .item.grande {
+        grid-row: span 1;
+    }
+}
+/* ==========================
+   SLIDER ELEGANTE CENTRADO
+   ========================== */
+
+.slider-section {
+    padding: 80px 0;
+    background: #f8f6f3;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.slider {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto; /* CENTRADO */
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Área de imágenes */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+/* Imágenes */
+.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 20s infinite;
+}
+
+/* Tiempos de cada imagen (4 imágenes) */
+.slides img:nth-child(1) { animation-delay: 0s; }
+.slides img:nth-child(2) { animation-delay: 5s; }
+.slides img:nth-child(3) { animation-delay: 10s; }
+.slides img:nth-child(4) { animation-delay: 15s; }
+
+/* Animación suave */
+@keyframes fade {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slides {
+        height: 280px;
+    }
+}
+
+/* ==========================
+   TÍTULO SLIDER
+   ========================== */
+
+.titulo-slider {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--azul); /* Cambia aquí el color */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Línea decorativa debajo */
+.titulo-slider::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--azul);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+.institucional {
+    padding: 100px 12%;
+    background: #f4f6f9;
+}
+
+.institucional-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.institucional h2 {
+    color: var(--azul);
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.institucional-texto p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.institucional-datos {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.dato {
+    margin-bottom: 20px;
+}
+
+.dato h3 {
+    font-size: 1rem;
+    color: var(--azul);
+    margin-bottom: 5px;
+}
+
+.dato p {
+    font-weight: 500;
+}
+/* ================= BOTONES FLOTANTES REDES ================= */
+
+.redes-flotantes {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.redes-flotantes a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.redes-flotantes a:hover {
+    transform: scale(1.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+    background: #25D366;
+}
+
+/* Facebook */
+.btn-facebook {
+    background: linear-gradient(135deg, #1877F2, #145dbf);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .redes-flotantes a {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+/* foto en la parte de abajo de los logos */
+.hero{
+height:65vh;
+width:100%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,.88) 0%,
+rgba(0,0,0,.60) 30%,
+rgba(0,0,0,.35) 100%
+),
+url("img/ganadera.PNG");
+
+background-size:cover;   /* quita el 130% */
+background-position:center center;
+background-repeat:no-repeat;
+}
+/* ================= MEJORAS RESPONSIVE SIN ROMPER DISEÑO ================= */
+
+/* Evita que todo se desborde */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Evita scroll horizontal feo */
+body {
+    overflow-x: hidden;
+}
+
+/* Mejora visual en tablets */
+@media (max-width: 1024px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        height: 90px;
+    }
+
+    .bienvenida {
+        gap: 40px;
+    }
+}
+
+/* Mejora en celulares */
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        padding: 100px 15px;
+        background-size: cover; /* refuerzo */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .nav {
+        padding: 0 20px;
+    }
+
+    .logos-bar {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .logo.left,
+    .logo.center,
+    .logo.right {
+        justify-self: center;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .bienvenida {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .bienvenida-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        min-width: 240px;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn-volver {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .hamburger {
+        font-size: 26px;
+    }
+}
+/* ================= SOLUCIÓN LOGOS FIJOS ================= */
+@media (max-width: 768px) {
+
+    /* Mantener los 3 logos en línea SIEMPRE */
+    .logos-bar {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo.left {
+        order: 1;
+    }
+
+    .logo.center {
+        order: 2;
+    }
+
+    .logo.right {
+        order: 3;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+}
+
+/* ================= ORDEN TEXTO PRIMERO ================= */
+@media (max-width: 768px) {
+
+    .bienvenida {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* TEXTO PRIMERO */
+    .bienvenida-texto {
+        order: 1;
+    }
+
+    /* IMAGEN DESPUÉS */
+    .bienvenida-img {
+        order: 2;
+    }
+}
+
+/* ================= MEJOR AJUSTE VISUAL ================= */
+@media (max-width: 768px) {
+
+    .bienvenida-texto {
+        text-align: center;
+    }
+
+    .bienvenida-texto p {
+        padding: 0 10px;
+    }
+
+    .bienvenida-img img {
+        margin-top: 20px;
+    }
+}
+/* ================= HERO PERFECTO EN CELULAR ================= */
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto; /* quita el corte feo */
+        min-height: 85vh; /* ocupa buena pantalla */
+        padding: 120px 20px 80px;
+
+        /* mejor ajuste de imagen */
+        background-size: cover;
+        background-position: center center;
+    }
+
+    /* TEXTO */
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* NAV MEJOR POSICIONADO */
+    .nav {
+        top: 15px;
+        padding: 0 15px;
+    }
+
+    /* BOTÓN VOLVER */
+    .btn-volver {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* HAMBURGUESA */
+    .hamburger {
+        font-size: 26px;
+    }
+}
+
+/* ================= CELULARES PEQUEÑOS ================= */
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 90vh;
+        padding: 110px 15px 70px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ================================================= */
+/* LOADER */
+/* ================================================= */
+
+#loader{
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #071a2d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+
+    transition: opacity .5s ease;
+}
+
+.spinner{
+    width: 70px;
+    height: 70px;
+
+    border: 6px solid rgba(255,255,255,.2);
+
+    border-top: 6px solid white;
+
+    border-radius: 50%;
+
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ========================================= */
+/* FOOTER PREMIUM */
+/* ========================================= */
+
+.footer{
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+    linear-gradient(
+    135deg,
+    #071a2d,
+    #0a3d62
+    );
+}
+
+.footer::before{
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(255,255,255,.05);
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -120px;
+}
+/* ========================================= */
+/* REVEAL SCROLL */
+/* ========================================= */
+
+.reveal{
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ========================================= */
+/* TRANSICIONES SUAVES */
+/* ========================================= */
+
+img,
+button,
+a,
+.card,
+.video-container{
+    transition: all .35s ease;
+}
+/* ========================================= */
+/*fondo oscuro sobre la imagen hero */
+/* ========================================= */
+.hero{
+    position: relative;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero *{
+    position: relative;
+    z-index: 2;
+}
+/* ========================================= */
+/*se agrego efecto glassmorphism*/
+/* ========================================= */
+.stat{
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* HOVER LINKS */
+
+.nav-menu a:hover,
+.menu a:hover,
+.sidebar a:hover,
+.menu-content a:hover{
+
+    padding-left: 10px;
+
+    color: #ffffff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+
+        top: 220px !important;
+
+        right: 20px !important;
+
+        font-size: 35px !important;
+    }
+
+}
+/* ================= INSTITUCIONAL ================= */
+
+.institucional {
+    padding: 80px 10%;
+    background: #f5f5f5;
+}
+
+.institucional-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.institucional-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.institucional-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1b1b1b;
+}
+
+.institucional-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.institucional-imagen {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+}
+
+.institucional-imagen img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* ================= NAVBAR PERFECTA ================= */
+.nav{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 25px;
+    z-index: 9999;
+}
+
+/* ================= BOTÓN VOLVER ================= */
+.btn-volver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 42px;
+    padding: 0 20px;
+
+    border-radius: 30px;
+    border: 2px solid white;
+
+    background: transparent;
+    color: white;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+    /* IMPORTANTE */
+    flex-shrink: 0;
+}
+
+.btn-volver:hover{
+    background: white;
+    color: #0a3d62;
+}
+
+/* ================= BOTÓN HAMBURGUESA ================= */
+.hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    /* IMPORTANTE */
+    flex-shrink: 0;
+}
+
+.hamburger:hover{
+    transform: scale(1.08);
+}
+
+/* ================= MENÚ DESPLEGABLE ================= */
+.menu-hamburguesa{
+    position: absolute;
+
+    top: 65px;
+    right: 25px;
+
+    width: 230px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+
+    display: none;
+    flex-direction: column;
+
+    padding: 15px;
+
+    animation: aparecer .3s ease;
+
+    z-index: 99999;
+}
+
+/* CUANDO SE ABRE */
+.menu-hamburguesa.active{
+    display: flex;
+}
+
+/* LINKS */
+.menu-hamburguesa a{
+    text-decoration: none;
+    color: #0a3d62;
+
+    font-weight: 600;
+
+    padding: 12px;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.menu-hamburguesa a:hover{
+    background: #f2f2f2;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= TABLET ================= */
+@media(max-width: 768px){
+
+    .nav{
+        top: 15px;
+        padding: 0 18px;
+    }
+
+    .btn-volver{
+        height: 40px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .hamburger{
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+    }
+
+    .menu-hamburguesa{
+        top: 60px;
+        right: 18px;
+        width: 210px;
+    }
+}
+
+/* ================= CELULAR ================= */
+@media(max-width: 480px){
+
+    .nav{
+        top: 12px;
+        padding: 0 14px;
+    }
+
+    .btn-volver{
+        height: 36px;
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+    .hamburger{
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+
+    .menu-hamburguesa{
+        width: 190px;
+        right: 14px;
+    }
+}
+/* ========================================= */
+/* FONDO GENERAL BLANCO */
+/* ========================================= */
+
+html,
+body{
+    background:#ffffff !important;
+    overflow-x:hidden;
+}
+
+/* TODAS LAS SECCIONES */
+section,
+.expo,
+.galeria,
+.galeria-chula,
+.slider-section,
+.institucional,
+.ubicacion,
+.estadisticas{
+    background:#ffffff !important;
+}
+
+/* TARJETAS */
+.stat,
+.item,
+.foto,
+.institucional-datos,
+.vino-card{
+    background:#ffffff !important;
+}
+
+/* MANTENER IMAGEN HERO */
+.hero{
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,.88) 0%,
+    rgba(0,0,0,.60) 30%,
+    rgba(0,0,0,.35) 100%
+    ),
+    url("img/ganadera.PNG") !important;
+
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+}

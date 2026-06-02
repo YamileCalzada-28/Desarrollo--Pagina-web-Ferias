@@ -1,0 +1,1148 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --azul: #0a3d62;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: white;
+    padding: 15px 40px;
+}
+
+.logos-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+}
+
+/* CONTENEDOR DE LOGOS */
+.logos-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+/* LOGOS */
+.logo img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+/* POSICIÓN DE LOGOS */
+.logo.left {
+    justify-self: start;
+}
+
+.logo.center {
+    justify-self: center;
+}
+
+.logo.right {
+    justify-self: end;
+}
+/* ================= HERO / FONDO AZUL ================= */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #0a3d62, #0a3d62);
+    color: white;
+    text-align: center;
+    padding: 140px 20px 120px;
+}
+
+/* ================= NAV DENTRO DEL HERO ================= */
+.nav {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    z-index: 1000;
+}
+
+/* ================= BOTÓN VOLVER (IZQUIERDA) ================= */
+.btn-volver {
+    margin-right: auto;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: all .3s ease;
+}
+
+.btn-volver:hover {
+    background: white;
+    color: var(--azul);
+}
+
+/* ================= HAMBURGUESA (DERECHA) ================= */
+.hamburger {
+    margin-left: auto;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* ================= MENU HAMBURGUESA ================= */
+.menu-hamburguesa {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    background: white;
+    width: 220px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    animation: fadeDown .3s ease;
+}
+
+.menu-hamburguesa a {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.menu-hamburguesa a:hover {
+    background: #f2f2f2;
+}
+
+.menu-hamburguesa.active {
+    display: flex;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= HERO TEXTO ================= */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: .9;
+}
+/* ================= BIENVENIDA MEJORADA ================= */
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: white;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* TEXTO */
+.bienvenida-texto {
+    max-width: 700px;
+}
+
+.bienvenida-texto h2 {
+    position: relative;
+    color: var(--azul);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.bienvenida-texto h2::after {
+    content: "";
+    display: block;
+    margin: 10px auto 0;
+    width: 60px;
+    height: 4px;
+    background: var(--azul);
+    border-radius: 10px;
+}
+
+.bienvenida-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* IMAGEN ABAJO */
+.bienvenida-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bienvenida-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* EFECTO BONITO */
+.bienvenida-img img:hover {
+    transform: scale(1.03);
+}
+
+/* ================= GRUPOS ================= */
+.seccion-grupos {
+    padding: 100px 12%;
+    background: #fafafa;
+    text-align: center;
+}
+
+.seccion-grupos h2 {
+    position: relative;
+    display: inline-block;
+    color: var(--azul);
+    margin-bottom: 60px;
+    font-size: 2.2rem;
+    padding-bottom: 12px;
+}
+
+.seccion-grupos h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--azul);
+    border-radius: 10px;
+}
+
+/* ================= CARRUSEL ================= */
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.card {
+    min-width: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    text-decoration: none;
+    color: var(--azul);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,.25);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .bienvenida {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 90px 8%;
+    }
+
+    .bienvenida-texto h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bienvenida-texto p {
+        margin: 0 auto 20px;
+    }
+}
+
+/* ================= menui despegable ================= */
+.menu-hamburguesa {
+    position: absolute;
+    top: 55px;
+    right: 40px;
+    background: white;
+    width: 220px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.menu-hamburguesa.active {
+    display: flex;
+}
+/* ================= flechas del card de musica ================= */
+.arrow {
+    background: var(--azul);
+    color: white;
+    border: none;
+    font-size: 38px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.15);
+}
+
+.arrow.left {
+    margin-right: 15px;
+}
+
+.arrow.right {
+    margin-left: 15px;
+}
+/* ================= BOTONES FLOTANTES REDES ================= */
+
+.redes-flotantes {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.redes-flotantes a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.redes-flotantes a:hover {
+    transform: scale(1.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+    background: #25D366;
+}
+
+/* Facebook */
+.btn-facebook {
+    background: linear-gradient(135deg, #1877F2, #145dbf);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .redes-flotantes a {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+/* ================= VIDEO DEL TEATRO ================= */
+.video-teatro {
+    padding: 80px 10%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.video-teatro h2 {
+    font-size: 32px;
+    color: #0a3d62;
+    margin-bottom: 20px;
+}
+
+.video-teatro p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.video-teatro .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.video-teatro .video-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+/* foto en la parte de abajo de los logos */
+.hero{
+height:60vh;
+width:100%;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,.88) 0%,
+rgba(0,0,0,.60) 30%,
+rgba(0,0,0,.35) 100%
+),
+url("img/mafia.PNG");
+
+background-size:130%;
+background-position:center 25%;
+background-repeat:no-repeat;
+}
+/* ================= MEJORAS RESPONSIVE SIN ROMPER DISEÑO ================= */
+
+/* Evita que todo se desborde */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Evita scroll horizontal feo */
+body {
+    overflow-x: hidden;
+}
+
+/* Mejora visual en tablets */
+@media (max-width: 1024px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        height: 90px;
+    }
+
+    .bienvenida {
+        gap: 40px;
+    }
+}
+
+/* Mejora en celulares */
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        padding: 100px 15px;
+        background-size: cover; /* refuerzo */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .nav {
+        padding: 0 20px;
+    }
+
+    .logos-bar {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .logo.left,
+    .logo.center,
+    .logo.right {
+        justify-self: center;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .bienvenida {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .bienvenida-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        min-width: 240px;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn-volver {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .hamburger {
+        font-size: 26px;
+    }
+}
+/* ================= SOLUCIÓN LOGOS FIJOS ================= */
+@media (max-width: 768px) {
+
+    /* Mantener los 3 logos en línea SIEMPRE */
+    .logos-bar {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo.left {
+        order: 1;
+    }
+
+    .logo.center {
+        order: 2;
+    }
+
+    .logo.right {
+        order: 3;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+}
+
+/* ================= ORDEN TEXTO PRIMERO ================= */
+@media (max-width: 768px) {
+
+    .bienvenida {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* TEXTO PRIMERO */
+    .bienvenida-texto {
+        order: 1;
+    }
+
+    /* IMAGEN DESPUÉS */
+    .bienvenida-img {
+        order: 2;
+    }
+}
+
+/* ================= MEJOR AJUSTE VISUAL ================= */
+@media (max-width: 768px) {
+
+    .bienvenida-texto {
+        text-align: center;
+    }
+
+    .bienvenida-texto p {
+        padding: 0 10px;
+    }
+
+    .bienvenida-img img {
+        margin-top: 20px;
+    }
+}
+/* ================= HERO PERFECTO EN CELULAR ================= */
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto; /* quita el corte feo */
+        min-height: 85vh; /* ocupa buena pantalla */
+        padding: 120px 20px 80px;
+
+        /* mejor ajuste de imagen */
+        background-size: cover;
+        background-position: center center;
+    }
+
+    /* TEXTO */
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* NAV MEJOR POSICIONADO */
+    .nav {
+        top: 15px;
+        padding: 0 15px;
+    }
+
+    /* BOTÓN VOLVER */
+    .btn-volver {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* HAMBURGUESA */
+    .hamburger {
+        font-size: 26px;
+    }
+}
+
+/* ================= CELULARES PEQUEÑOS ================= */
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 90vh;
+        padding: 110px 15px 70px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* ================= que sea responsible ================= */
+@media (min-width: 768px) {
+    .bienvenida-texto h2 {
+        font-size: 2.8rem;
+    }
+
+    .bienvenida-texto p {
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bienvenida {
+        padding: 120px 40px;
+    }
+
+    .bienvenida-img img {
+        max-width: 600px;
+    }
+}
+/* ================= diseño extra para la pagina de un boton ================= */
+.bienvenida-texto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: var(--azul);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.bienvenida-texto a:hover {
+    background: #062c44;
+}
+/* ================= este es para que tenga un fondo suave  ================= */
+.bienvenida {
+    background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+}
+/* ================= BOTÓN MEJORADO ================= */
+.bienvenida-texto a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: var(--azul);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.bienvenida-texto a:hover {
+    background: #062c44;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= ANIMACIÓN AL BAJAR ================= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= CARRUSEL MEJORADO ================= */
+.cards-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+}
+
+/* Quita scrollbar feo */
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* ================= RESPONSIVE CARDS ================= */
+@media (max-width: 768px) {
+    .card {
+        min-width: 220px;
+    }
+}
+/* ================= MOSTRAR / OCULTAR GRUPOS ================= */
+
+.seccion-grupos {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+/* CUANDO SE MUESTRA */
+.seccion-grupos.mostrar {
+    max-height: 2000px; /* suficiente para contenido */
+    opacity: 1;
+    transform: translateY(0);
+    padding: 100px 12%;
+}
+
+/* BOTÓN MÁS DINÁMICO */
+.bienvenida-texto a {
+    cursor: pointer;
+}
+/* ================= ARREGLO BIENVENIDA PRO ================= */
+
+/* En pantallas grandes (PC y laptop) */
+@media (min-width: 768px) {
+
+    .bienvenida {
+        display: flex;
+        flex-direction: row; /* lado a lado */
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        gap: 50px;
+    }
+
+    /* TEXTO */
+    .bienvenida-texto {
+        flex: 1;
+    }
+
+    /* IMAGEN */
+    .bienvenida-img {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bienvenida-img img {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
+/* En celular se mantiene bonito (texto arriba) */
+@media (max-width: 767px) {
+
+    .bienvenida {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bienvenida-texto {
+        order: 1;
+    }
+
+    .bienvenida-img {
+        order: 2;
+    }
+}
+.bienvenida-img img {
+    border-radius: 25px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+/* ================= VIDEO BONITO Y RESPONSIVE CORRECTO ================= */
+
+.video-teatro {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f5f7fa, #ffffff);
+    text-align: center;
+}
+
+.video-teatro h2 {
+    font-size: 2rem;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.video-teatro p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* CONTENEDOR */
+.video-wrapper {
+    width: 100%;
+    max-width: 600px; /* tamaño ideal */
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+/* VIDEO SIN RECORTE */
+.video-wrapper video {
+    width: 100%;
+    height: auto; /* 🔥 CLAVE */
+    display: block;
+}
+
+/* EFECTO HOVER SUAVE */
+.video-wrapper:hover {
+    transform: scale(1.02);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .video-wrapper {
+        max-width: 90%; /* se adapta al celular */
+    }
+
+    .video-teatro h2 {
+        font-size: 1.6rem;
+    }
+
+    .video-teatro p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+}
+.video-wrapper {
+    border: 4px solid rgba(255,255,255,0.2);
+}
+.redes-flotantes a:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+h2 {
+    letter-spacing: 1px;
+}
+.card img {
+    height: 180px;
+    object-fit: cover;
+}
+/* ================= FONDOS MÁS PRO ================= */
+
+/* HERO más fuerte */
+.hero {
+    position: relative;
+}
+
+/* capa oscura más marcada */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55); /* 🔥 más oscuro */
+    z-index: 0;
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+/* BIENVENIDA */
+.bienvenida {
+    background: #ffffff;
+}
+
+/* SECCIÓN INTERMEDIA (más contraste) */
+.momento,
+.video-teatro {
+    background: linear-gradient(135deg, #f1f4f9, #e6ecf5);
+}
+
+/* GRUPOS */
+.seccion-grupos {
+    background: #ffffff;
+}
+
+/* FOOTER más fuerte */
+.footer {
+    background: linear-gradient(135deg, #0a1f44, #0a3d62);
+}
+/* sombras para que no se pierdan los fondos de la pagina */
+/* ================= SOMBRAS SUAVES ================= */
+
+section {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* tarjetas más visibles */
+.card {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+/* ================= separacion de secciones del fondo de la pagina ================= */
+section {
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+/* ================= MEJORA VISUAL DEL VIDEO (IMPORTANTE) ================= */
+.video-wrapper {
+    background:scroll;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    display: inline-block;
+}
+
+/* ================= NAV PERFECTAMENTE ALINEADO menu y boton================= */
+
+.nav{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 18px;
+    z-index: 1000;
+}
+
+/* BOTÓN VOLVER */
+.btn-volver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 42px;
+    padding: 0 18px;
+
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 28px;
+    padding: 0;
+}
+
+/* CELULAR */
+@media (max-width:768px){
+
+    .nav{
+        top: 15px;
+        padding: 0 14px;
+    }
+
+    .btn-volver{
+        height: 38px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .hamburger{
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+}
+/* ================================================= */
+/* BOTONES PREMIUM */
+/* ================================================= */
+
+.btn-volver,
+.arrow{
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* brillo animado */
+.btn-volver::before,
+.arrow::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+    );
+
+    transition: .6s;
+}
+
+.btn-volver:hover::before,
+.arrow:hover::before{
+    left: 100%;
+}
+/* ================================================= */
+/* LOADER */
+/* ================================================= */
+
+#loader{
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #071a2d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+
+    transition: opacity .5s ease;
+}
+
+.spinner{
+    width: 70px;
+    height: 70px;
+
+    border: 6px solid rgba(255,255,255,.2);
+
+    border-top: 6px solid white;
+
+    border-radius: 50%;
+
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.bienvenida-texto{
+    flex:1;
+    max-width:550px;
+}
+
+.bienvenida-texto p{
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+.bienvenida-texto h2{
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+.bienvenida-img img{
+    width: 460px;
+    height: 510px;
+    object-fit: cover;
+    border-radius: 20px;
+}

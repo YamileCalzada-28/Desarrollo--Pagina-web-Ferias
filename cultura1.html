@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cultural</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME FUNCIONAL -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="cultura1.css">
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="logos-bar">
+        <div class="logo left"><img src="img/Logo_Ayundamiento.png"></div>
+        <div class="logo center"><img src="img/logo_fiestasteatro.png"></div>
+        <div class="logo right"><img src="img/logo_ferias.png"></div>
+    </div>
+</header>
+
+<section class="hero">
+    <nav class="nav">
+        <a href="index.html" class="btn-volver">← Volver</a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <div class="menu-hamburguesa" id="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Música</a>
+            <a href="#">Cultura</a>
+            <a href="#"></a>
+        </div>
+    </nav>
+
+     <div class="hero-text">
+        <h1>Cultura</h1>
+        <p>
+            Tradición, cultura y comunidad que fortalecen  
+            la identidad de Pabellón de Arteaga
+        </p>
+    </div>
+</section>
+
+<section class="video-section">
+    <h2 class="video-title">Nuestra Cultura</h2>
+    <p class="video-text">
+        Homenaje a las culturas que dan identidad a nuestra tierra. A través de sus tradiciones, lenguas, colores y saberes, celebramos el orgullo de pertenecer a una comunidad rica en historia y diversidad. Cada escena refleja el amor por nuestras raíces y 
+        el compromiso de mantener viva la herencia cultural que nos define como pueblo.
+    </p>
+
+    <div class="video-container">
+        <video controls>
+            <source src="img/video_intro.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+
+<!-- ================= BIENVENIDA ================= -->
+<section class="bienvenida">
+
+  <!-- TEXTO -->
+  <div class="bienvenida-texto">
+    <h2>Nuestras tradiciones siguen vivas</h2>
+
+    <p>
+      La Feria Regional Revolución es un espacio de encuentro
+      que celebra la historia, las costumbres y el orgullo
+      de Pabellón de Arteaga.
+    </p>
+
+    <p>
+      A través de actividades culturales, deportivas y familiares,
+      se fortalecen los lazos comunitarios.
+    </p>
+
+    <p>
+      Cada competencia se vivió con emoción, respeto y alegría,
+      impulsando valores como el trabajo en equipo y el orgullo
+      de representar a nuestra gente.
+    </p>
+
+    <p>
+      Te invitamos a revivir estas jornadas deportivas y celebrar
+      el talento y la dedicación de nuestra feria.
+    </p>
+  </div>
+
+  <!-- IMÁGENES -->
+  <div class="bienvenida-imagenes">
+    <img src="img/ina.png" alt="Evento cultural" onclick="mostrarInfo('cultural')">
+    <img src="img/candi.PNG" alt="Evento deportivo" onclick="mostrarInfo('deportivo')">
+    <img src="img/desfi.PNG" alt="Evento familiar" onclick="mostrarInfo('familiar')">
+  </div>
+
+</section>
+
+<!-- INFO EMERGENTE -->
+<div id="info-box" class="info-box">
+  <div class="info-contenedor">
+    <span class="flecha-salir" onclick="cerrarInfo()">⬅</span>
+    <p id="info-contenido"></p>
+  </div>
+</div>
+<!-- ============ GALERÍA ============ -->
+<section class="galeria">
+    <h2>ACTIVIDADES DE LA FERIA REGIONAL DE LA REVOLUCION 2025</h2>
+
+    <div class="grid">
+
+        <!-- CARD 1 -->
+        <div class="card"
+            data-title="INAUGURACIÓN DE TIERRA DE VINOS"
+            data-text="El 14 de noviembre se inauguró el corredor gastronómico cultural Tierra de Vinos, teniendo un número aproximado de 4,000 visitantes durante el periodo de feria."
+            data-images="img/inaguracion.png">
+
+            <div class="card-img">
+                <img src="img/inaguracion.png" alt="Inauguración">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>Inauguración de Tierra de Vinos</h3>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card"
+            data-title="EXPOSICION DE VESTIDOS TIPICOS Y FOTOGRAFIAS POSTALES DE MI MUNICIPIO"
+            data-text="Muestra cultural de vestidos típicos y fotografías postales que celebran las tradiciones, el arte y la identidad del municipio en el marco de la Feria Regional de la Revolución 2025."
+            data-images="img/expo1.png,img/expo3.png">
+
+            <div class="card-img">
+                <img src="img/expo.png" alt="Música Tradicional">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>EXPOSICION DE VESTIDOS TIPICOS Y FOTOGRAFIAS POSTALES DE MI MUNICIPIO</h3>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card"
+            data-title="INAGURACION DEL PABELLON EMPRENDEDOR"
+            data-text="Durante la Feria de la Comunidad de Pabellón de Arteaga se realizó la inauguración del Pabellón Emprendedor, un espacio destinado a promover el talento y los productos de emprendedores locales. La actividad contó con la participación de autoridades y visitantes, fortaleciendo el consumo local y la convivencia comunitaria."
+            data-images="img/emprendedor.png,img/empre2.png">
+
+            <div class="card-img">
+                <img src="img/emprendedor.png" alt="Gastronomía">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>INAGURACION DEL PABELLON EMPRENDEDOR</h3>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card"
+            data-title="INAGURACION DE LA ZONA  PEQUES QUE TRASCIENDEN"
+            data-text="Durante la Feria Regional de la Revolución 2025, en la comunidad de Pabellón de Arteaga, se inauguró la zona “Peques que Trascienden”, un espacio dedicado al entretenimiento y convivencia de niñas y niños. La actividad contó con la participación de autoridades y familias, quienes dieron inicio a este espacio recreativo que promovió la diversión segura y el fortalecimiento de la convivencia familiar."
+            data-images="img/peques1.png,img/peques2.png">
+
+            <div class="card-img">
+                <img src="img/peques.png" alt="Deportes">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>INAGURACION DE LA ZONA  PEQUES QUE TRASCIENDEN</h3>
+        </div>
+        <!-- CARD 5 -->
+        <div class="card"
+            data-title="ZONA DEL ABUELO"
+            data-text="En la Zona del Abuelo, durante la Feria Regional de la Revolución 2025 en Pabellón de Arteaga, se recibió a grupos de la tercera edad de diferentes municipios, quienes convivieron con los adultos mayores de nuestro municipio en un ambiente de alegría y armonía. La actividad incluyó música en vivo, baile y espacios de convivencia, fortaleciendo la integración social y el bienestar de las y los asistentes."
+            data-images="img/abuelo1.png,img/abuelo2.png">
+
+            <div class="card-img">
+                <img src="img/abuelo.png" alt="Música Tradicional">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>ZONA DEL ABUELO</h3>
+        </div>
+         <!-- CARD 6-->
+        <div class="card"
+            data-title="PRESENTACIÓN DE CANDIDATAS  Y DEVELACIÓN DE CARTEL DE FERIA"
+            data-text="En el marco de la Feria Regional de la Revolución 2025, en la comunidad de Pabellón de Arteaga, se llevó a cabo la presentación de candidatas y la develación del cartel oficial de la feria, evento que reunió a autoridades, familias y asistentes. La actividad se desarrolló en un ambiente festivo, resaltando la identidad cultural y el entusiasmo de la comunidad, marcando el inicio de las celebraciones y fortaleciendo la participación ciudadana."
+            data-images="img/presentacion1.png,img/presentacion2.png">
+
+            <div class="card-img">
+                <img src="img/presentacion.png" alt="Música Tradicional">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>PRESENTACIÓN DE CANDIDATAS  Y DEVELACIÓN DE CARTEL DE FERIA</h3>
+        </div>
+         <!-- CARD 7-->
+        <div class="card"
+            data-title="CERTAMEN DE CORONACIÓN"
+            data-text="Llegó la hora de la Revelación de nuestra Reina y soberana del Municipio de Pabellón de Arteaga, pasando las autoridades así como nuestra Alcaldesa, Maestra Lucero Espinoza Vázquez, Presidente del Patronato Lic. Ricardo Pedroza Álvarez acompañados del Lic. Enrique de la Torre de la Paz, y Dir. Aurora Jiménez Esquivel. Pasaron a darles las felicitaciones y a premiar a las seis participantes, tres de ellas fueron seleccionadas, en un orden del 3er al 1er lugar, mencionando su orden para saber el nombre de la Reina y sus princesas.El momento no se hizo esperar Gema Escalera Serrano, fue coronada como Reina de la Revolución 2025 en su edición número 115, Primer Princesas Alexandra Puga y Segunda Princesa Daniela Gómez  Calzada."
+            data-images="img/cora1.png">
+
+            <div class="card-img">
+                <img src="img/coro.png" alt="Música Tradicional">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>CERTAMEN DE CORONACIÓN</h3>
+        </div>
+
+          <!-- CARD 8-->
+        <div class="card"
+            data-title="DESFILE DE LA REVOLUCIÓN EN SU EDICION 2025"
+            data-text="Durante la Feria Regional de la Revolución 2025, en la comunidad de Pabellón de Arteaga, se llevó a cabo el tradicional Desfile de la Revolución, en el que participaron instituciones educativas, autoridades, asociaciones y ciudadanía en general. El desfile recorrió las principales calles del municipio con carros alegóricos, contingentes culturales y representaciones históricas, promoviendo la identidad, la historia y la participación comunitaria en un ambiente familiar y festivo."
+            data-images="img/desfile.png,img/desfile2.png">
+
+            <div class="card-img">
+                <img src="img/desfile1.png" alt="Música Tradicional">
+                <span class="ver-mas">Ver más</span>
+            </div>
+
+            <h3>DESFILE DE LA REVOLUCIÓN EN SU EDICION 2025</h3>
+        </div>
+
+</section>
+
+    </div>
+
+    <!-- BOTONES FLOTANTES -->
+<div class="redes-flotantes">
+    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://facebook.com/TUPAGINA" target="_blank" class="btn-facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+     
+
+<!-- ============ MODAL ============ -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+
+        <!-- Tacha roja -->
+        <span class="close-modal" id="closeModal">✖</span>
+
+        <h2 id="modalTitle" class="modal-title"></h2>
+        <p id="modalText" class="modal-text"></p>
+
+        <div class="modal-gallery" id="modalGallery"></div>
+    </div>
+</div>
+
+<!-- ============ JS ============ -->
+<!-- ============ JS ============ -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ===== MODAL ===== */
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalText = document.getElementById("modalText");
+    const modalGallery = document.getElementById("modalGallery");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll(".ver-mas").forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            const card = btn.closest(".card");
+
+            modalTitle.textContent = card.dataset.title;
+            modalText.textContent = card.dataset.text;
+
+            modalGallery.innerHTML = "";
+
+            card.dataset.images.split(",").forEach(src => {
+                const img = document.createElement("img");
+                img.src = src.trim();
+                img.alt = "Imagen del evento";
+                modalGallery.appendChild(img);
+            });
+
+            modal.style.display = "flex";
+        });
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+        modalGallery.innerHTML = "";
+    });
+
+    /* ===== MENÚ HAMBURGUESA ===== */
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        hamburger.textContent = menu.classList.contains("active") ? "✕" : "☰";
+    });
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener("click", (e) => {
+        if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove("active");
+            hamburger.textContent = "☰";
+        }
+    });
+
+});
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
+});
+</script>
+<script>
+
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+
+    reveals.forEach((element) => {
+
+        const windowHeight = window.innerHeight;
+
+        const top = element.getBoundingClientRect().top;
+
+        if(top < windowHeight - 100){
+            element.classList.add("active");
+        }
+
+    });
+
+});
+
+</script>
+</body>
+</html>
