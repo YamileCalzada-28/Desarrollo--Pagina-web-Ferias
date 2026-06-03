@@ -1160,3 +1160,59 @@ body{
         transform: translateX(8px);
     }
 }
+@media (max-width: 768px){
+
+    .arrow{
+        width: 55px;
+        height: 55px;
+        font-size: 32px;
+
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 50;
+    }
+
+    .arrow.left{
+        left: 5px;
+        margin: 0;
+    }
+
+    .arrow.right{
+        right: 5px;
+        margin: 0;
+    }
+}
+/* ================= FLECHAS DEL CARRUSEL ================= */
+
+.arrow {
+    background: #0a3d62;
+    color: white;
+    border: none;
+    font-size: 38px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    transition: all .3s ease;
+
+    z-index: 10;
+}
+
+.arrow:hover {
+    transform: scale(1.15);
+}
+
+.arrow.left {
+    margin-right: 15px;
+}
+
+.arrow.right {
+    margin-left: 15px;
+}
