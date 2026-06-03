@@ -1123,36 +1123,40 @@ body{
         margin: 0;
     }
 }
+
+/* ================= MENSAJE DEL CARRUSEL ================= */
+
 .indicacion-carrusel{
-    text-align:center;
-    color:#0a3d62;
-    font-weight:600;
-    margin-bottom:20px;
-    font-size:15px;
+    text-align: center;
+    color: #0a3d62;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 20px;
+
+    background: #eef4fa;
+    padding: 10px;
+    border-radius: 12px;
+
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media(max-width:768px){
+/* Animación en celular */
+@media (max-width: 768px){
+
     .indicacion-carrusel{
-        display:block;
         animation: moverIndicacion 1.5s infinite;
     }
+
 }
 
 @keyframes moverIndicacion{
     0%,100%{
-        transform:translateX(0);
+        transform: translateX(0);
     }
+
     50%{
-        transform:translateX(8px);
+        transform: translateX(8px);
     }
-}
-.indicacion-carrusel{
-    text-align:center;
-    color:#0a3d62;
-    font-weight:700;
-    margin-bottom:20px;
-    font-size:15px;
-    background:#eef4fa;
-    padding:10px;
-    border-radius:12px;
 }
