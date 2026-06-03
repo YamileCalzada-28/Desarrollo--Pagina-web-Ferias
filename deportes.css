@@ -1090,3 +1090,69 @@ body{
     font-size: 32px;
     margin-bottom: 18px;
 }
+/* ================= FLECHAS VISIBLES EN CELULAR ================= */
+@media (max-width: 768px) {
+
+    .carousel {
+        position: relative;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 50;
+
+        width: 55px;
+        height: 55px;
+
+        font-size: 32px;
+        font-weight: bold;
+
+        background: rgba(10,61,98,0.95);
+        box-shadow: 0 4px 15px rgba(0,0,0,.35);
+    }
+
+    .arrow.left {
+        left: 5px;
+        margin: 0;
+    }
+
+    .arrow.right {
+        right: 5px;
+        margin: 0;
+    }
+}
+.indicacion-carrusel{
+    text-align:center;
+    color:#0a3d62;
+    font-weight:600;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+    .indicacion-carrusel{
+        display:block;
+        animation: moverIndicacion 1.5s infinite;
+    }
+}
+
+@keyframes moverIndicacion{
+    0%,100%{
+        transform:translateX(0);
+    }
+    50%{
+        transform:translateX(8px);
+    }
+}
+.indicacion-carrusel{
+    text-align:center;
+    color:#0a3d62;
+    font-weight:700;
+    margin-bottom:20px;
+    font-size:15px;
+    background:#eef4fa;
+    padding:10px;
+    border-radius:12px;
+}
