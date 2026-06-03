@@ -332,16 +332,16 @@ window.addEventListener("load",()=>{
     },2500);
 
 });
-</script><script>
+</script>
+<script>
 
-const fechaInicio = new Date("November 13, 2027 00:00:00").getTime();
-const fechaFin = new Date("November 22, 2027 23:59:59").getTime();
+const fechaInicio = new Date("November 13, 2026 00:00:00").getTime();
+const fechaFin = new Date("November 22, 2026 23:59:59").getTime();
 
 const contador = setInterval(() => {
 
     const ahora = new Date().getTime();
 
-    /* CUENTA REGRESIVA AL INICIO */
     const distancia = fechaInicio - ahora;
 
     const dias = Math.floor(
@@ -368,7 +368,6 @@ const contador = setInterval(() => {
     document.getElementById("minutos").innerHTML = minutos;
     document.getElementById("segundos").innerHTML = segundos;
 
-    /* CUANDO INICIE LA FERIA */
     if(distancia < 0){
 
         document.getElementById("dias").innerHTML = "00";
