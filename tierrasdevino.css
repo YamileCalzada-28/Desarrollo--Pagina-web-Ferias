@@ -2749,3 +2749,24 @@ body{
         height:220px;
     }
 }
+#map {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.panel-vinicola{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.panel-vinicola button{
+    padding:10px 18px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}

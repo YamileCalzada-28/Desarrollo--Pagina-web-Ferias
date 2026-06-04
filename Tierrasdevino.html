@@ -95,7 +95,7 @@
 <section id="ruta-vino" class="section ruta-vino">
     <h2>Ruta del Vino</h2>
     <p>Descubre las vinícolas más importantes de Pabellón de Arteaga</p>
-    <div id="map" style="height:400px;"></div>
+    <div id="map" style="height:600px; border-radius:15px;"></div>
 
     <div class="panel-vinicola">
         <button onclick="moverMapa(22.176, -102.272)">Vinícola El Sarmiento</button>
@@ -103,7 +103,7 @@
         <button onclick="moverMapa(22.178, -102.295)">Hacienda de Letras</button>
         <button onclick="moverMapa(22.160, -102.280)">Vinícola Santa Elena</button>
         <button onclick="moverMapa(22.170, -102.250)">Bodegas Origen</button>
-         <button onclick="moverMapa(22.106, -102.301)"> Viñas Las Cruces</button>
+        <button onclick="moverMapa(22.106, -102.301)"> Viñas Las Cruces</button>
     </div>
 </section>
 
@@ -188,43 +188,100 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
 <script>
-var map = L.map('map').setView([22.1500, -102.2667], 12);
+
+var map = L.map('map');
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap'
 }).addTo(map);
 
 var lugares = [
-    {nombre: "Vinícola El Sarmiento", lat: 22.176, lng: -102.272, img: "img/foto4.jpeg", desc: "Historia y vino premium."},
-    {nombre: "Hacienda de Letras", lat: 22.178, lng: -102.295, img: "img/letras2.PNG",desc: "Innovación y pasión por el vino."},
-    {nombre: "Bodegas Origen", lat: 22.170, lng: -102.250, img: "img/bodega5.jpg",desc: "Innovación y pasión por el vino."},
-    {nombre: "Vinícola Santa Elena", lat: 22.160, lng: -102.280, img: "img/santa4.PNG",desc: "Innovación y pasión por el vino."},
-    {nombre: "Vinícola El Aguaje", lat: 22.140, lng: -102.260, img: "img/aguaje2.jpg",desc: "Innovación y pasión por el vino."},
-    { nombre: "Viñas Las Cruces", lat: 22.106, lng: -102.301, img: "img/cruces3.PNG",desc: "Innovación y pasión por el vino."}
+
+{
+    nombre: "Vinícola El Sarmiento",
+    lat: 22.176,
+    lng: -102.272,
+    img: "img/foto4.jpeg",
+    desc: "Tradición y calidad en cada botella."
+},
+
+{
+    nombre: "Vinícola El Aguaje",
+    lat: 22.140,
+    lng: -102.260,
+    img: "img/aguaje2.jpg",
+    desc: "Experiencia enológica."
+},
+
+{
+    nombre: "Hacienda de Letras",
+    lat: 22.178,
+    lng: -102.295,
+    img: "img/letras2.PNG",
+    desc: "Historia y vino premium."
+},
+
+{
+    nombre: "Vinícola Santa Elena",
+    lat: 22.160,
+    lng: -102.280,
+    img: "img/santa4.PNG",
+    desc: "Tradición vitivinícola."
+},
+
+{
+    nombre: "Bodegas Origen",
+    lat: 22.170,
+    lng: -102.250,
+    img: "img/bodega5.jpg",
+    desc: "Innovación y pasión por el vino."
+},
+
+{
+    nombre: "Viñas Las Cruces",
+    lat: 22.106,
+    lng: -102.301,
+    img: "img/cruces3.PNG",
+    desc: "Experiencias y vinos artesanales."
+}
+
 ];
 
+var marcadores = [];
+
 lugares.forEach(function(lugar) {
-    L.marker([lugar.lat, lugar.lng])
-        .addTo(map)
-        .bindPopup(`
-            <div style="text-align:center;">
-                <img src="${lugar.img}" style="width:100px; border-radius:10px;">
-                <h4>${lugar.nombre}</h4>
-                <p>${lugar.desc}</p>
-                <button onclick="window.open('https://www.google.com/maps?q=${lugar.lat},${lugar.lng}')">Ver ubicación</button>
-            </div>
-        `);
+
+    let marcador = L.marker([lugar.lat, lugar.lng])
+    .addTo(map)
+    .bindPopup(`
+        <div style="text-align:center; max-width:180px;">
+            <img src="${lugar.img}"
+                 style="width:120px;border-radius:10px;">
+            <h4>${lugar.nombre}</h4>
+            <p>${lugar.desc}</p>
+            <button onclick="window.open('https://www.google.com/maps?q=${lugar.lat},${lugar.lng}','_blank')">
+                Ver ubicación
+            </button>
+        </div>
+    `);
+
+    marcadores.push(marcador);
 });
 
+var grupo = new L.featureGroup(marcadores);
+
+map.fitBounds(grupo.getBounds().pad(0.2));
+
 function moverMapa(lat, lng) {
-    map.setView([lat, lng], 14);
+
+    map.flyTo([lat, lng], 15, {
+        animate: true,
+        duration: 1.5
+    });
+
 }
 
-function toggleModo() {
-    document.body.classList.toggle("dark-mode");
-}
 </script>
 <script>
 window.addEventListener("load", () => {
